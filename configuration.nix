@@ -25,7 +25,6 @@
 
   networking.hostName = "nixos-laptop";
 
-  # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/London";
@@ -35,12 +34,8 @@
     keyMap = "uk";
   };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
+  services.displayManager.ly.enable = true;
+  programs.niri.enable = true;
 
   # Enable sound.
   # services.pulseaudio.enable = true;
@@ -51,22 +46,23 @@
   # };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
+  services.libinput.enable = true;
 
   users.users.max = {
     isNormalUser = true;
     extraGroups = [ "max" "wheel" ];
   };
 
-  # programs.firefox.enable = true;
+  programs.firefox.enable = true;
 
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
+    alacritty
     fastfetch
+    fuzzel
     git
     tree
     vim
+    xwayland-satellite
   ];
 
   services.openssh.enable = true;
