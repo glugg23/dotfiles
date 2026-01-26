@@ -10,7 +10,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  
+
   fileSystems = {
     "/".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
     "/home".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
@@ -60,9 +60,11 @@
   users.users.max = {
     isNormalUser = true;
     extraGroups = [ "max" "wheel" ];
+    shell = pkgs.zsh;
   };
 
   programs.firefox.enable = true;
+  programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
     alacritty
@@ -81,7 +83,7 @@
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
-  
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,
