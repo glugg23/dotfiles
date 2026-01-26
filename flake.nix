@@ -6,7 +6,7 @@
   outputs = inputs@{ self, nixpkgs, nixos-hardware, ... }: {
     nixosConfigurations.nixos-laptop = nixpkgs.lib.nixosSystem {
       modules = [
-        ./configuration.nix
+        ./hosts/nixos-laptop
         nixos-hardware.nixosModules.framework-amd-ai-300-series
       ];
     };
