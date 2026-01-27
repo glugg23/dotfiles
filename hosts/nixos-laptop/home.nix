@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ../../modules/zsh.nix
     ../../modules/niri.nix
+    ../../modules/waybar.nix
+    ../../modules/zsh.nix
   ];
 
   home.username = "max";
