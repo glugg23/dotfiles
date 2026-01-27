@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/zsh.nix
+    ../../modules/niri.nix
   ];
 
   home.username = "max";

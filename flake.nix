@@ -13,9 +13,12 @@
         ./hosts/nixos-laptop
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.max = ./hosts/nixos-laptop/home.nix;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "bak";
+            users.max = ./hosts/nixos-laptop/home.nix;
+          };
         }
         nixos-hardware.nixosModules.framework-amd-ai-300-series
       ];
