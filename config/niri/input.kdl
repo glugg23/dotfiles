@@ -1,0 +1,17 @@
+input {
+    keyboard {
+        xkb {
+            layout "gb"
+        }
+        repeat-delay 200
+        repeat-rate 35
+    }
+
+    touchpad {
+        tap
+        dwt
+        click-method "clickfinger"
+    }
+
+    focus-follows-mouse max-scroll-amount="0%"
+}
