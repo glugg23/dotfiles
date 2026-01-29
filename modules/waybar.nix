@@ -4,7 +4,7 @@
   programs.waybar = {
     enable = true;
     settings.main = {
-      modules-right = [ "clock" ];
+      modules-right = [ "battery" "clock" ];
 
       "clock" = {
         format = "{:%d/%m/%Y %r}";
