@@ -77,6 +77,10 @@
     xwayland-satellite
   ];
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+
   services.openssh.enable = true;
 
   # Copy the NixOS configuration file and link it from the resulting system
