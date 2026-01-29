@@ -73,6 +73,7 @@
     fuzzel
     git
     tree
+    swaybg
     vim
     xwayland-satellite
   ];
