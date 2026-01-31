@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../modules/firefox.nix
     ../../modules/kitty.nix
     ../../modules/niri.nix
     ../../modules/waybar.nix
