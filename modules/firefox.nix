@@ -12,15 +12,19 @@
       DisableFirefoxStudies = true;
       DisablePocket = true;
       DisableTelemetry = true;
-      EnableTrackingProtection = true;
+      EnableTrackingProtection = {
+        Value = true;
+      };
       FirefoxHome = {
         SponsoredTopSites = false;
         Stories = false;
         SponsoredStories = false;
       };
-      GenerativeAI = false;
+      GenerativeAI = {
+        Enabled = false;
+      };
       HardwareAcceleration = true;
-      HttpsOnlyMode = true;
+      HttpsOnlyMode = "enabled";
 
       ExtensionSettings =
       let
