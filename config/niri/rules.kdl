@@ -9,6 +9,14 @@ window-rule {
     open-fullscreen true // Default is fullscreen as it's the last option
 }
 
+workspace "chat"
+
+window-rule {
+    match app-id=r#"vesktop"#
+    open-maximized true
+    open-on-workspace "chat"
+}
+
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true

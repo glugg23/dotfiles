@@ -71,9 +71,11 @@
     fastfetch
     fuzzel
     git
+    mako
     playerctl
     tree
     swaybg
+    vesktop
     vim
     xwayland-satellite
   ];
