@@ -10,8 +10,17 @@ input {
     touchpad {
         tap
         dwt
+        accel-speed 0.25
+        accel-profile "flat"
         click-method "clickfinger"
+        scroll-factor 0.5
     }
 
     focus-follows-mouse max-scroll-amount="0%"
+}
+
+gestures {
+    hot-corners {
+        off
+    }
 }
