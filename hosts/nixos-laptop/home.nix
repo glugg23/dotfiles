@@ -4,6 +4,7 @@
   imports = [
     ../../modules/firefox.nix
     ../../modules/kitty.nix
+    ../../modules/mpv.nix
     ../../modules/niri.nix
     ../../modules/waybar.nix
     ../../modules/zsh.nix

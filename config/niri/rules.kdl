@@ -1,10 +1,12 @@
-// Open the Firefox picture-in-picture player as floating by default.
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
+}
+
+window-rule {
+    match app-id=r#"mpv"#
+    open-maximized-to-edges true // Maximize to edges when leaving fullscreen
+    open-fullscreen true // Default is fullscreen as it's the last option
 }
 
 window-rule {

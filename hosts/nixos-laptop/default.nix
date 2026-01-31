@@ -71,6 +71,7 @@
     fastfetch
     fuzzel
     git
+    playerctl
     tree
     swaybg
     vim
