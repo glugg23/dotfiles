@@ -1,4 +1,4 @@
-workspace "1"
+workspace "main"
 
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"

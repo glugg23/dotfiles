@@ -15,6 +15,7 @@
       "niri/workspaces" = {
         format = "{icon}";
         format-icons = {
+          main = "󰹑";
           discord = "";
         };
       };
