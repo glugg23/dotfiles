@@ -12,8 +12,15 @@
         interval = 1;
       };
 
-      "niri/window"."format" = "{app_id}";
+      "niri/workspaces" = {
+        format = "{icon}";
+        format-icons = {
+          discord = "";
+        };
+      };
+
+      "niri/window".format = "{app_id}";
     };
-    style = ../config/waybar/style.css;
+    style = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/config/waybar/style.css";
   };
 }
