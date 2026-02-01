@@ -15,6 +15,7 @@
       "paste_actions" = "quote-urls-at-prompt,no-op";
       "enable_audio_bell" = false;
       "window_padding_width" = 6;
+      "touch_scroll_multiplier" = 5.0;
     };
   };
 }
