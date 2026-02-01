@@ -6,6 +6,8 @@
       ./hardware-configuration.nix
     ];
 
+  hardware.bluetooth.enable = true;
+
   boot.loader.limine.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
