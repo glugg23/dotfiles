@@ -10,3 +10,9 @@ output "ASUSTek COMPUTER INC ASUS VG249 0x00000B82" {
     position x=-240 y=-1080 // I have no idea how this works...
     variable-refresh-rate on-demand=true
 }
+
+output "ASUSTek COMPUTER INC ASUS VG249 0x00000B2E" {
+    mode "1920x1080@144.001"
+    position x=1680 y=-1080
+    variable-refresh-rate on-demand=true
+}
