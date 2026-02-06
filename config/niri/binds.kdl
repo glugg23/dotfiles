@@ -6,6 +6,7 @@ binds {
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+B hotkey-overlay-title="Open a browser: firefox" { spawn "firefox"; }
     Mod+Shift+B hotkey-overlay-title=null { spawn-sh "firefox --private-window"; }
+    Mod+E hotkey-overlay-title="Open a file manager: yazi" { spawn-sh "kitty yazi"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.

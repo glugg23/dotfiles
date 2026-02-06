@@ -80,6 +80,7 @@
     vesktop
     vim
     xwayland-satellite
+    yazi
   ];
 
   fonts.packages = with pkgs; [
