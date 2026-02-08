@@ -5,7 +5,8 @@
     enable = true;
     settings.main = {
       modules-left = [ "niri/workspaces" "niri/window" ];
-      modules-right = [ "battery" "clock" ];
+      modules-center = [ "clock" ];
+      modules-right = [ "battery" "network" ];
 
       clock = {
         format = "{:%d/%m/%Y %r}";
@@ -23,6 +24,13 @@
           default = [ "󰂎" "󰁻" "󰁾" "󰂀" "󰁹" ];
           charging = [ "󰢟" "󰂆" "󰢝" "󰢞" "󰂅" ];
         };
+      };
+
+      network = {
+        format-wifi = "󰖩";
+        format-ethernet = "󰈀";
+        format-disconnected = "󰖪";
+        tooltip-format = "{essid}";
       };
 
       "niri/workspaces" = {

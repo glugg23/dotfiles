@@ -103,11 +103,8 @@ button:hover {
 }
 
 #battery {
-    color: @blk;
-}
-
-#battery.good {
     background-color: @grn;
+    color: @blk;
 }
 
 #battery.warning {
@@ -163,11 +160,12 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: @bgb;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: @bgr;
+    color: @red;
 }
 
 #pulseaudio {
