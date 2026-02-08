@@ -71,14 +71,8 @@ button:hover {
 #battery,
 #cpu,
 #memory,
-#disk,
-#temperature,
-#backlight,
 #network,
-#pulseaudio,
-#wireplumber,
-#tray,
-#power-profiles-daemon {
+#tray {
     padding: 0 10px;
     color: @fg;
 }
@@ -119,80 +113,33 @@ button:hover {
     background-color: @blu;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
-}
-
+#cpu,
 #memory {
-    background-color: #9b59b6;
+    background-color: @bgg;
+    border: 2px solid @grn;
 }
 
-#disk {
-    background-color: #964B00;
+#cpu.warning,
+#memory.warning {
+    background-color: @bgy;
+    border: 2px solid @ylw;
 }
 
-#backlight {
-    background-color: #90b1b1;
+#cpu.critical,
+#memory.critical {
+    background-color: @bgr;
+    border: 2px solid @red;
 }
 
 #network {
     background-color: @bgb;
+    border: 2px solid @blu;
 }
 
 #network.disconnected {
     background-color: @bgr;
     color: @red;
-}
-
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
-}
-
-#temperature {
-    background-color: #f0932b;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
+    border: 2px solid @red;
 }
 
 #tray {
