@@ -7,9 +7,22 @@
       modules-left = [ "niri/workspaces" "niri/window" ];
       modules-right = [ "battery" "clock" ];
 
-      "clock" = {
+      clock = {
         format = "{:%d/%m/%Y %r}";
         interval = 1;
+      };
+
+      battery = {
+        states = {
+          good = 80;
+          warning = 50;
+          critical = 20;
+        };
+        format = "{capacity}% {icon}";
+        format-icons = {
+          default = [ "󰂎" "󰁻" "󰁾" "󰂀" "󰁹" ];
+          charging = [ "󰢟" "󰂆" "󰢝" "󰢞" "󰂅" ];
+        };
       };
 
       "niri/workspaces" = {
