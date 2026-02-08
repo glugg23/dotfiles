@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../../modules/pipewire.nix
     ];
 
   hardware.bluetooth.enable = true;
@@ -50,11 +51,6 @@
     };
   };
   programs.niri.enable = true;
-
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
