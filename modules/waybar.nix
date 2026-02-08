@@ -10,10 +10,6 @@
 
       "niri/workspaces" = {
         format = "{icon}";
-        format-icons = {
-          main = "󰹑";
-          discord = "";
-        };
       };
 
       "niri/window".format = "{app_id}";

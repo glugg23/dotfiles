@@ -1,5 +1,3 @@
-workspace "main"
-
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
@@ -11,12 +9,9 @@ window-rule {
     open-fullscreen true // Default is fullscreen as it's the last option
 }
 
-workspace "discord"
-
 window-rule {
     match app-id=r#"vesktop"#
     open-maximized true
-    open-on-workspace "discord"
 }
 
 window-rule {
