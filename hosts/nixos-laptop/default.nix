@@ -64,7 +64,6 @@
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
-    alacritty
     brightnessctl
     fastfetch
     fuzzel
