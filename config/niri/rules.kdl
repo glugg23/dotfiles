@@ -15,7 +15,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"Spotify"#
+    match app-id=r#"[s|S]potify"#
     open-maximized-to-edges true
 }
 

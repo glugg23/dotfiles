@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       ../../modules/pipewire.nix
+      ../../modules/spotify.nix
     ];
 
   hardware.bluetooth.enable = true;
@@ -70,7 +71,6 @@
     git
     playerctl
     tree
-    spotify
     swaybg
     swaynotificationcenter
     vesktop
