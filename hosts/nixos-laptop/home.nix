@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../modules/easyeffects.nix
     ../../modules/firefox.nix
     ../../modules/kitty.nix
     ../../modules/mpv.nix
