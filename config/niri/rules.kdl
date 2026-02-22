@@ -1,4 +1,9 @@
 window-rule {
+    match app-id=r#"firefox$"#
+    open-maximized true
+}
+
+window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
@@ -17,6 +22,16 @@ window-rule {
 window-rule {
     match app-id=r#"[s|S]potify"#
     open-maximized-to-edges true
+}
+
+window-rule {
+    match app-id=r#"steam"# title="^Steam$"
+    open-maximized-to-edges true
+}
+
+window-rule {
+    match app-id=r#"steam"#
+    open-floating true
 }
 
 window-rule {
