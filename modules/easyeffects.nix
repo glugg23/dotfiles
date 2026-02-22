@@ -1,6 +1,38 @@
-{ ... }:
+{ lib, ... }:
 
+let
+  makePreset =
+    preset@{ device, device-profile, ... }:
+    {
+      "easyeffects/autoload/output/${device}:${device-profile}.json" = {
+        text = lib.generators.toJSON { } preset;
+      };
+    };
+in
 {
+  xdg.dataFile = lib.mkMerge (
+    map makePreset [
+      {
+        device = "alsa_output.pci-0000_c1_00.6.analog-stereo";
+        device-description = "Ryzen HD Audio Controller Analog Stereo";
+        device-profile = "Headphones";
+        preset-name = "disabled";
+      }
+      {
+        device = "alsa_output.pci-0000_c1_00.6.analog-stereo";
+        device-description = "Family 17h/19h/1ah HD Audio Controller Analog Stereo";
+        device-profile = "Speakers";
+        preset-name = "fw13-easy-effects";
+      }
+      {
+        device = "alsa_output.usb-GuangZhou_FiiO_Electronics_Co._Ltd_FiiO_K7-00.analog-stereo";
+        device-description = "FiiO K7 Analog Stereo";
+        device-profile = "Analog Output";
+        preset-name = "disabled";
+      }
+    ]
+  );
+
   services.easyeffects = {
     enable = true;
     extraPresets = {
@@ -341,8 +373,8 @@
 
       disabled = {
         output = {
-          blocklist = [];
-          plugins_order = [];
+          blocklist = [ ];
+          plugins_order = [ ];
         };
       };
     };
