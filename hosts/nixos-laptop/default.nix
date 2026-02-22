@@ -5,7 +5,7 @@
     [
       ./hardware-configuration.nix
       ../../modules/pipewire.nix
-      ../../modules/spotify.nix
+      ../../modules/spotify
     ];
 
   hardware.bluetooth.enable = true;
