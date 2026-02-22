@@ -14,6 +14,12 @@
   home.username = "max";
   home.homeDirectory = "/home/max";
 
+  xdg.portal = {
+    enable = true;
+    configPackages = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   dconf = {
     enable = true;
     settings = {
@@ -29,6 +35,14 @@
       name = "Breeze-Dark";
       package = pkgs.kdePackages.breeze-gtk;
     };
+  };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.capitaine-cursors;
+    name = "capitaine-cursors";
+    size = 24;
   };
 
   home.stateVersion = "25.11";
