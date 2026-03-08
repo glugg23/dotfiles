@@ -51,7 +51,11 @@
       default_input = "password";
     };
   };
-  programs.niri.enable = true;
+
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -62,6 +66,7 @@
     shell = pkgs.zsh;
   };
 
+  programs.niri.enable = true;
   programs.zsh.enable = true;
   programs.steam.enable = true;
 
