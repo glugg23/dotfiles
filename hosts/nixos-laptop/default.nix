@@ -70,6 +70,7 @@
     fastfetch
     fuzzel
     git
+    obsidian
     playerctl
     tree
     swaybg

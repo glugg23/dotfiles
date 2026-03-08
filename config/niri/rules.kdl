@@ -15,6 +15,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"obsidian"#
+    open-maximized true
+}
+
+window-rule {
     match app-id=r#"vesktop"#
     open-maximized-to-edges true
 }
