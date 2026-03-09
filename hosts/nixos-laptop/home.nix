@@ -45,5 +45,9 @@
     size = 24;
   };
 
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "gtk3";
+  };
+
   home.stateVersion = "25.11";
 }

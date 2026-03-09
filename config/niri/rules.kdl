@@ -40,6 +40,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="org.qbittorrent.qBittorrent"
+    default-column-width { proportion 0.66; }
+}
+
+window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
 }

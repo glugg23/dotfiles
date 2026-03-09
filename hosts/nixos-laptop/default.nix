@@ -77,6 +77,7 @@
     git
     obsidian
     playerctl
+    qbittorrent
     tree
     swaybg
     swaynotificationcenter
