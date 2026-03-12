@@ -2,11 +2,11 @@
 
 {
   imports = [
+    ../../wm/wayland/niri/home.nix
     ../../easyeffects.nix
     ../../firefox.nix
     ../../kitty.nix
     ../../mpv.nix
-    ../../niri.nix
     ../../waybar.nix
     ../../zsh.nix
   ];

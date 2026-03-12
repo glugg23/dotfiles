@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       ../../dm/ly.nix
+      ../../wm/wayland/niri/nixos.nix
       ../../pipewire.nix
       ../../spotify
     ];
@@ -53,7 +54,6 @@
     shell = pkgs.zsh;
   };
 
-  programs.niri.enable = true;
   programs.zsh.enable = true;
   programs.steam.enable = true;
 
@@ -70,7 +70,6 @@
     swaynotificationcenter
     vesktop
     vim
-    xwayland-satellite
     yazi
   ];
 
