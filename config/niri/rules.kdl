@@ -1,42 +1,26 @@
 window-rule {
-    match app-id=r#"firefox$"#
+    match app-id="firefox$"
+    match app-id="obsidian"
     open-maximized true
 }
 
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="vesktop"
+    match app-id="[s|S]potify"
+    match app-id="steam" title="^Steam$"
+    open-maximized-to-edges true
+}
+
+window-rule {
+    match app-id="firefox$" title="^Picture-in-Picture$"
+    match app-id="steam"
     open-floating true
 }
 
 window-rule {
-    match app-id=r#"mpv"#
+    match app-id="mpv"
     open-maximized-to-edges true // Maximize to edges when leaving fullscreen
     open-fullscreen true // Default is fullscreen as it's the last option
-}
-
-window-rule {
-    match app-id=r#"obsidian"#
-    open-maximized true
-}
-
-window-rule {
-    match app-id=r#"vesktop"#
-    open-maximized-to-edges true
-}
-
-window-rule {
-    match app-id=r#"[s|S]potify"#
-    open-maximized-to-edges true
-}
-
-window-rule {
-    match app-id=r#"steam"# title="^Steam$"
-    open-maximized-to-edges true
-}
-
-window-rule {
-    match app-id=r#"steam"#
-    open-floating true
 }
 
 window-rule {
