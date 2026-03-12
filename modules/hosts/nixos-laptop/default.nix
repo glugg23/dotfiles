@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../../dm/ly.nix
       ../../pipewire.nix
       ../../spotify
     ];
@@ -36,20 +37,6 @@
   i18n.defaultLocale = "en_GB.UTF-8";
   console = {
     keyMap = "uk";
-  };
-
-  services.displayManager.ly = {
-    enable = true;
-    settings = {
-      bigclock = "en";
-      bigclock_12hr = true;
-      bigclock_seconds = true;
-      brightness_down_key = "F7";
-      brightness_up_key = "F8";
-      clear_password = true;
-      clock = "%d/%m/%Y";
-      default_input = "password";
-    };
   };
 
   services.mullvad-vpn = {
