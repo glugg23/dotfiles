@@ -10,7 +10,7 @@
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }: {
     nixosConfigurations.nixos-laptop = nixpkgs.lib.nixosSystem {
       modules = [
-        ./modules/hosts/nixos-laptop
+        ./modules/hosts/nixos-laptop/configuration.nix
         home-manager.nixosModules.home-manager
         {
           home-manager = {
