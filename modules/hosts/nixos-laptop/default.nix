@@ -4,8 +4,8 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../modules/pipewire.nix
-      ../../modules/spotify
+      ../../pipewire.nix
+      ../../spotify
     ];
 
   hardware.bluetooth.enable = true;

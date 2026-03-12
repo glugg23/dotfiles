@@ -2,13 +2,13 @@
 
 {
   imports = [
-    ../../modules/easyeffects.nix
-    ../../modules/firefox.nix
-    ../../modules/kitty.nix
-    ../../modules/mpv.nix
-    ../../modules/niri.nix
-    ../../modules/waybar.nix
-    ../../modules/zsh.nix
+    ../../easyeffects.nix
+    ../../firefox.nix
+    ../../kitty.nix
+    ../../mpv.nix
+    ../../niri.nix
+    ../../waybar.nix
+    ../../zsh.nix
   ];
 
   home.username = "max";
