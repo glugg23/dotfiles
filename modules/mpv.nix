@@ -16,13 +16,13 @@
       keep-open = true;
     };
     /*
-    # From desktop settings but not needed on laptop
-    scriptOpts = {
-      osc = {
-        scalewindowed = 1.25;
-        scalefullscreen = 1.25;
+      # From desktop settings but not needed on laptop
+      scriptOpts = {
+        osc = {
+          scalewindowed = 1.25;
+          scalefullscreen = 1.25;
+        };
       };
-    };
     */
     scripts = [ pkgs.mpvScripts.mpris ];
   };

@@ -1,14 +1,18 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ../../dm/ly.nix
-      ../../wm/wayland/niri/nixos.nix
-      ../../pipewire.nix
-      ../../spotify
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ../../dm/ly.nix
+    ../../wm/wayland/niri/nixos.nix
+    ../../pipewire.nix
+    ../../spotify
+  ];
 
   hardware.bluetooth.enable = true;
 
@@ -18,13 +22,48 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   fileSystems = {
-    "/".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
-    "/home".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
-    "/root".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
-    "/nix".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
-    "/var/cache".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
-    "/var/tmp".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
-    "/var/log".options = [ "defaults" "noatime" "compress=zstd:1" "commit=120" ];
+    "/".options = [
+      "defaults"
+      "noatime"
+      "compress=zstd:1"
+      "commit=120"
+    ];
+    "/home".options = [
+      "defaults"
+      "noatime"
+      "compress=zstd:1"
+      "commit=120"
+    ];
+    "/root".options = [
+      "defaults"
+      "noatime"
+      "compress=zstd:1"
+      "commit=120"
+    ];
+    "/nix".options = [
+      "defaults"
+      "noatime"
+      "compress=zstd:1"
+      "commit=120"
+    ];
+    "/var/cache".options = [
+      "defaults"
+      "noatime"
+      "compress=zstd:1"
+      "commit=120"
+    ];
+    "/var/tmp".options = [
+      "defaults"
+      "noatime"
+      "compress=zstd:1"
+      "commit=120"
+    ];
+    "/var/log".options = [
+      "defaults"
+      "noatime"
+      "compress=zstd:1"
+      "commit=120"
+    ];
     "/tmp".fsType = "tmpfs";
   };
   zramSwap.enable = true;
@@ -50,7 +89,10 @@
 
   users.users.max = {
     isNormalUser = true;
-    extraGroups = [ "max" "wheel" ];
+    extraGroups = [
+      "max"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
 
@@ -93,7 +135,10 @@
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,

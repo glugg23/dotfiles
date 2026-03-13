@@ -4,9 +4,17 @@
   programs.waybar = {
     enable = true;
     settings.main = {
-      modules-left = [ "niri/workspaces" "niri/window" ];
+      modules-left = [
+        "niri/workspaces"
+        "niri/window"
+      ];
       modules-center = [ "clock" ];
-      modules-right = [ "cpu" "memory" "battery" "network" ];
+      modules-right = [
+        "cpu"
+        "memory"
+        "battery"
+        "network"
+      ];
 
       "niri/workspaces" = {
         format = "{icon}";
@@ -43,8 +51,20 @@
         };
         format = "{capacity}% {icon}";
         format-icons = {
-          default = [ "󰂎" "󰁻" "󰁾" "󰂀" "󰁹" ];
-          charging = [ "󰢟" "󰂆" "󰢝" "󰢞" "󰂅" ];
+          default = [
+            "󰂎"
+            "󰁻"
+            "󰁾"
+            "󰂀"
+            "󰁹"
+          ];
+          charging = [
+            "󰢟"
+            "󰂆"
+            "󰢝"
+            "󰢞"
+            "󰂅"
+          ];
         };
       };
 
