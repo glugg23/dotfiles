@@ -5,9 +5,12 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-darwin.url = "github:nix-darwin/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
     nixos-hardware.url = "github:NixOS/nixos-hardware";
   };
-  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, ... }: {
     nixosConfigurations.nixos-laptop = nixpkgs.lib.nixosSystem {
       modules = [
         ./modules/hosts/nixos-laptop/configuration.nix
