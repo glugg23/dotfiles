@@ -17,12 +17,12 @@
       ];
       spotify = pkgs.spotify.overrideAttrs (
         finalAttrs: previousAttrs: {
-          version = "1.2.82.428.g0ac8be2b";
-          rev = "92";
+          version = "1.2.84.475.ga1a748ff";
+          rev = "93";
           src = pkgs.fetchurl {
             name = "spotify-${finalAttrs.version}-${finalAttrs.rev}.snap";
             url = "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_${finalAttrs.rev}.snap";
-            hash = "sha512-/9lB4gLotYvM2QkHt8cKS8P4IXrBVzgoXEk4bWR3GQum0OnJqK/qCC9evmCZ7PAqbbyh5/8vSblM+QXXXiQiMA==";
+            hash = "sha512-X9IslXh1MHExJpBu45mXnIowdhmvkBko+fupk23WhKNoUPSR37jbj5Ee4V2ZYKxCtgyDgX8Px1YKynu3KEVUFg==";
           };
           env = previousAttrs.env // {
             librarypath = "${pkgs.lib.makeLibraryPath deps}:${previousAttrs.env.librarypath}";
