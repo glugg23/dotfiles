@@ -7,24 +7,27 @@
 
     policies = {
       AppAutoUpdate = false;
+      AutofillCreditCardEnabled = false;
       BackgroundAppUpdate = false;
       DisableFirefoxAccounts = true;
       DisableFirefoxStudies = true;
       DisablePocket = true;
       DisableTelemetry = true;
-      EnableTrackingProtection = {
-        Value = true;
-      };
+      EnableTrackingProtection.Value = true;
+      EncryptedMediaExtensions.Enabled = true;
       FirefoxHome = {
         SponsoredTopSites = false;
         Stories = false;
         SponsoredStories = false;
       };
-      GenerativeAI = {
-        Enabled = false;
-      };
+      GenerativeAI.Enabled = false;
       HardwareAcceleration = true;
       HttpsOnlyMode = "enabled";
+      OfferToSaveLogins = false;
+      Permissions = {
+        Autoplay.Default = "block-audio-video";
+        Notifications.BlockNewRequests = true;
+      };
 
       ExtensionSettings =
         let
@@ -63,16 +66,9 @@
         "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
         "browser.warnOnQuitShortcut" = false;
         "general.smoothScroll" = false;
+        "intl.locale.requested" = "en-GB,en-US";
         "privacy.globalprivacycontrol.enabled" = true;
       };
-      # Settings that I can't find a key for:
-      # Language: English (GB)
-      # DRM Content: true
-      # Ask to save passwords: false
-      # Save and autofill payment info: false
-      # Allow Firefox to improve features, performance and stability between updates: false
-      # Notifications: Block new requests
-      # Autoplay: Block Audio and Video
 
       search = {
         force = true;
