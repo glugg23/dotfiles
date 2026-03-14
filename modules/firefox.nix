@@ -54,12 +54,25 @@
 
     profiles.default = {
       settings = {
+        "browser.aboutConfig.showWarning" = false;
+        "browser.ai.control.default" = "blocked";
+        "browser.ai.control.translations" = "available";
         "browser.ctrlTab.sortByRecentlyUsed" = true;
         "browser.download.useDownloadDir" = false;
         "browser.newtabpage.activity-stream.topSitesRows" = 2;
+        "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
         "browser.warnOnQuitShortcut" = false;
         "general.smoothScroll" = false;
+        "privacy.globalprivacycontrol.enabled" = true;
       };
+      # Settings that I can't find a key for:
+      # Language: English (GB)
+      # DRM Content: true
+      # Ask to save passwords: false
+      # Save and autofill payment info: false
+      # Allow Firefox to improve features, performance and stability between updates: false
+      # Notifications: Block new requests
+      # Autoplay: Block Audio and Video
 
       search = {
         force = true;
