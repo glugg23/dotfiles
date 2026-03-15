@@ -4,12 +4,11 @@
   programs.waybar = {
     enable = true;
     settings.main = {
-      margin-top = 4;
+      margin = "4 0 2 0";
       spacing = 8;
 
       modules-left = [
         "niri/workspaces"
-        "niri/window"
       ];
       modules-center = [ "clock" ];
       modules-right = [
@@ -18,12 +17,6 @@
         "battery"
         "network"
       ];
-
-      "niri/workspaces" = {
-        format = "{icon}";
-      };
-
-      "niri/window".format = "{app_id}";
 
       clock = {
         format = "{:%r}";
