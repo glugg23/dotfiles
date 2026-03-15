@@ -87,8 +87,6 @@ tooltip label {
 
 #clock,
 #battery,
-#cpu,
-#memory,
 #network,
 #tray {
     padding: 0 8px;
@@ -97,8 +95,18 @@ tooltip label {
     border-radius: 4px;
 }
 
-#clock:hover {
-    border: 2px solid @grn;
+#cpu,
+#memory {
+    padding: 0 8px;
+    background: @bgg;
+    color: @fg;
+    border-radius: 4px;
+}
+
+#clock:hover,
+#cpu:hover,
+#memory:hover {
+    box-shadow: inset 0 0 0 2px @grn;
 }
 
 #window,
@@ -133,22 +141,16 @@ tooltip label {
     background-color: @blu;
 }
 
-#cpu,
-#memory {
-    background-color: @bgg;
-    border: 2px solid @grn;
-}
-
 #cpu.warning,
 #memory.warning {
     background-color: @bgy;
-    border: 2px solid @ylw;
+    box-shadow: inset 0 0 0 2px @ylw;
 }
 
 #cpu.critical,
 #memory.critical {
     background-color: @bgr;
-    border: 2px solid @red;
+    box-shadow: inset 0 0 0 2px @red;
 }
 
 #network {

@@ -35,7 +35,8 @@
           warning = 50;
           critical = 90;
         };
-        format = "{usage}% ";
+        format = "";
+        format-alt = "{usage}% ";
       };
 
       memory = {
@@ -43,7 +44,8 @@
           warning = 75;
           critical = 90;
         };
-        format = "{percentage}% ";
+        format = "";
+        format-alt = "{percentage}% ";
         tooltip-format = "{used:0.1f}/{total:0.1f} GiB";
       };
 
