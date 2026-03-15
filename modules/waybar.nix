@@ -4,6 +4,9 @@
   programs.waybar = {
     enable = true;
     settings.main = {
+      margin-top = 4;
+      spacing = 8;
+
       modules-left = [
         "niri/workspaces"
         "niri/window"
@@ -23,8 +26,15 @@
       "niri/window".format = "{app_id}";
 
       clock = {
-        format = "{:%d/%m/%Y %r}";
+        format = "{:%r}";
         interval = 1;
+        tooltip-format = "{calendar}";
+        calendar.format.today = "<span color='#a7c080'><b><u>{}</u></b></span>";
+        actions = {
+          on-click = "shift_up";
+          on-click-right = "shift_down";
+          on-click-middle = "shift_reset";
+        };
       };
 
       cpu = {
