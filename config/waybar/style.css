@@ -21,7 +21,7 @@
 }
 
 window#waybar {
-    background-color: transparent;
+    background: transparent;
 }
 
 .modules-left {
@@ -104,7 +104,8 @@ tooltip label {
 
 #clock:hover,
 #cpu:hover,
-#memory:hover {
+#memory:hover,
+#network:hover {
     box-shadow: inset 0 0 0 2px @grn;
 }
 
@@ -144,25 +145,23 @@ tooltip label {
 
 #cpu.warning,
 #memory.warning {
-    background-color: @bgy;
+    background: @bgy;
     box-shadow: inset 0 0 0 2px @ylw;
 }
 
 #cpu.critical,
 #memory.critical {
-    background-color: @bgr;
+    background: @bgr;
     box-shadow: inset 0 0 0 2px @red;
 }
 
-#network {
-    background-color: @bgb;
-    border: 2px solid @blu;
+#network.disconnected {
+    background: @bgr;
+    color: @red;
 }
 
-#network.disconnected {
-    background-color: @bgr;
-    color: @red;
-    border: 2px solid @red;
+#network.disconnected:hover {
+    box-shadow: inset 0 0 0 2px @red;
 }
 
 #tray {

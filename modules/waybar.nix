@@ -88,10 +88,24 @@
       };
 
       network = {
-        format-wifi = "󰖩";
-        format-ethernet = "󰈀";
-        format-disconnected = "󰖪";
-        tooltip-format = "{essid}";
+        interval = 10;
+        on-click-right = "kitty nmtui";
+        format = "{icon}";
+        format-alt = "{bandwidthTotalBytes} {icon}";
+        tooltip-format-wifi = "{essid} ({signalStrength}%) {icon}";
+        tooltip-format-ethernet = "{bandwidthDownBytes} down {bandwidthUpBytes} up";
+        tooltip-format-disconnected = "Disconnected!";
+        format-icons = {
+          wifi = [
+            "󰤯"
+            "󰤟"
+            "󰤢"
+            "󰤥"
+            "󰤨"
+          ];
+          ethernet = "󰈀";
+          disconnected = "󰤮";
+        };
       };
     };
 
