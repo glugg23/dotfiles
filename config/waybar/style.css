@@ -86,7 +86,6 @@ tooltip label {
 }
 
 #clock,
-#battery,
 #network,
 #tray {
     padding: 0 8px;
@@ -125,20 +124,22 @@ tooltip label {
 }
 
 #battery {
-    background-color: @grn;
+    background: @grn;
     color: @blk;
+    padding: 0 8px;
+    border-radius: 4px;
 }
 
 #battery.warning {
-    background-color: @ylw;
+    background: @ylw;
 }
 
 #battery.critical {
-    background-color: @red;
+    background: @red;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: @blu;
+    background: @blu;
 }
 
 #cpu.warning,

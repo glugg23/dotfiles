@@ -54,20 +54,34 @@
           warning = 50;
           critical = 20;
         };
-        format = "{capacity}% {icon}";
+        format = "{icon}";
+        format-alt = "{capacity}% {icon}";
+        tooltip-format = "{capacity}% {timeTo}";
         format-icons = {
           default = [
             "󰂎"
+            "󰁺"
             "󰁻"
+            "󰁼"
+            "󰁽"
             "󰁾"
+            "󰁿"
             "󰂀"
+            "󰂁"
+            "󰂂"
             "󰁹"
           ];
           charging = [
             "󰢟"
+            "󰢜"
             "󰂆"
+            "󰂇"
+            "󰂈"
             "󰢝"
+            "󰂉"
             "󰢞"
+            "󰂊"
+            "󰂋"
             "󰂅"
           ];
         };
