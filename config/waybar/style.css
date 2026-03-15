@@ -86,8 +86,7 @@ tooltip label {
 }
 
 #clock,
-#network,
-#tray {
+#network {
     padding: 0 8px;
     background: @bg;
     color: @fg;
@@ -107,21 +106,6 @@ tooltip label {
 #memory:hover,
 #network:hover {
     box-shadow: inset 0 0 0 2px @grn;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
 }
 
 #battery {
@@ -162,17 +146,4 @@ tooltip label {
 
 #network.disconnected:hover {
     box-shadow: inset 0 0 0 2px @red;
-}
-
-#tray {
-    background-color: #2980b9;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
 }
