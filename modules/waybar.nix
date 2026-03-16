@@ -15,6 +15,7 @@
         "cpu"
         "memory"
         "battery"
+        "power-profiles-daemon"
         "wireplumber"
         "network"
       ];
@@ -89,6 +90,15 @@
             "󰂋"
             "󰂅"
           ];
+        };
+      };
+
+      power-profiles-daemon = {
+        tooltip-format = "{profile}";
+        format-icons = {
+          performance = "󱓞";
+          balanced = "󰊚";
+          power-saver = "󰌪";
         };
       };
 
