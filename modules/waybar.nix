@@ -19,6 +19,10 @@
         "network"
       ];
 
+      "niri/workspaces" = {
+        cursor = true;
+      };
+
       clock = {
         format = "{:%r}";
         interval = 1;
@@ -38,6 +42,7 @@
         };
         format = "";
         format-alt = "{usage}% ";
+        tooltip = false; # this can be true if tooltip-format is added
       };
 
       memory = {
@@ -55,9 +60,8 @@
           warning = 50;
           critical = 20;
         };
-        format = "{icon}";
-        format-alt = "{capacity}% {icon}";
-        tooltip-format = "{capacity}% {timeTo}";
+        format = "{capacity}% {icon}";
+        tooltip-format = "{timeTo}";
         format-icons = {
           default = [
             "󰂎"
