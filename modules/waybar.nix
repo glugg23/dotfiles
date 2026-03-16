@@ -15,6 +15,7 @@
         "cpu"
         "memory"
         "battery"
+        "wireplumber"
         "network"
       ];
 
@@ -85,6 +86,18 @@
             "󰂅"
           ];
         };
+      };
+
+      wireplumber = {
+        format = "{volume}% {icon}";
+        format-muted = "0% 󰝟";
+        format-icons = [
+          "󰕿"
+          "󰖀"
+          "󰕾"
+        ];
+        on-click = "pavucontrol";
+        on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
       };
 
       network = {

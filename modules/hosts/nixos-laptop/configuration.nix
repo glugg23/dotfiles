@@ -107,6 +107,7 @@
     fuzzel
     git
     obsidian
+    pavucontrol
     playerctl
     qbittorrent
     tree
