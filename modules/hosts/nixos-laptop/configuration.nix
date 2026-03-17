@@ -105,6 +105,7 @@
     brightnessctl
     fastfetch
     fuzzel
+    gimp
     git
     obsidian
     pavucontrol

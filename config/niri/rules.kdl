@@ -8,6 +8,7 @@ window-rule {
     match app-id="vesktop"
     match app-id="[s|S]potify"
     match app-id="steam" title="^Steam$"
+    match app-id="gimp" title="GNU Image Manipulation Program"
     open-maximized-to-edges true
 }
 
@@ -15,6 +16,7 @@ window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     match app-id="steam"
     match app-id="org.pulseaudio.pavucontrol"
+    match app-id="gimp"
     open-floating true
 }
 
