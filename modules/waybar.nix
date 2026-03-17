@@ -9,6 +9,7 @@
 
       modules-left = [
         "niri/workspaces"
+        "tray"
       ];
       modules-center = [ "clock" ];
       modules-right = [
@@ -22,6 +23,10 @@
 
       "niri/workspaces" = {
         cursor = true;
+      };
+
+      tray = {
+        spacing = 8;
       };
 
       clock = {
