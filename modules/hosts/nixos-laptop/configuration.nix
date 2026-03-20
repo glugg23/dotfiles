@@ -100,6 +100,10 @@
 
   programs.zsh.enable = true;
   programs.steam.enable = true;
+  programs.nh = {
+    enable = true;
+    flake = "/home/max/dotfiles";
+  };
 
   environment.systemPackages = with pkgs; [
     brightnessctl
