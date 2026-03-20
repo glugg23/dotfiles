@@ -20,6 +20,7 @@
         Stories = false;
         SponsoredStories = false;
       };
+      FirefoxSuggest.WebSuggestions = false;
       GenerativeAI.Enabled = false;
       HardwareAcceleration = true;
       HttpsOnlyMode = "enabled";
