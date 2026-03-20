@@ -65,6 +65,7 @@
         "browser.download.useDownloadDir" = false;
         "browser.newtabpage.activity-stream.topSitesRows" = 2;
         "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
+        "browser.tabs.loadBookmarksInBackground" = true;
         "browser.urlbar.trimURLs" = false;
         "browser.warnOnQuitShortcut" = false;
         "general.smoothScroll" = false;
