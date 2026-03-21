@@ -14,6 +14,14 @@
   home.username = "max";
   home.homeDirectory = "/home/max";
 
+  home.packages =
+    let
+      swww-background = pkgs.callPackage ../../scripts/swww-background.nix {
+        homeDirectory = config.home.homeDirectory;
+      };
+    in
+    [ swww-background ];
+
   xdg.portal = {
     enable = true;
     configPackages = [ pkgs.xdg-desktop-portal-gtk ];

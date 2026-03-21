@@ -116,8 +116,8 @@
     playerctl
     qbittorrent
     tree
-    swaybg
     swaynotificationcenter
+    swww
     vesktop
     vim
     yazi
