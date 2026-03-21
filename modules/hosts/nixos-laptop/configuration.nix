@@ -111,6 +111,7 @@
     fuzzel
     gimp
     git
+    kdePackages.dolphin
     libreoffice-qt-fresh
     obsidian
     pavucontrol
