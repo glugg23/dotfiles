@@ -111,6 +111,7 @@
     fuzzel
     gimp
     git
+    libreoffice-qt-fresh
     obsidian
     pavucontrol
     playerctl
