@@ -3,7 +3,7 @@
 {
   programs.kitty = {
     enable = true;
-    font.name = "JetBrains Mono";
+    font.name = "JetBrains Mono NF";
     font.size = 12;
     shellIntegration.enableZshIntegration = true;
     themeFile = "everforest_dark_hard";
