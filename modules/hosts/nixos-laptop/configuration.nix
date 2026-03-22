@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ../../dm/ly.nix
     ../../wm/wayland/niri/nixos.nix
+    ../../fuzzel/nixos.nix
     ../../pipewire.nix
     ../../spotify
   ];
@@ -108,7 +109,6 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
     fastfetch
-    fuzzel
     gimp
     git
     kdePackages.dolphin
