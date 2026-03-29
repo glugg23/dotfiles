@@ -44,6 +44,7 @@
       name = "Breeze-Dark";
       package = pkgs.kdePackages.breeze-gtk;
     };
+    gtk4.theme = null;
   };
 
   home.pointerCursor = {
