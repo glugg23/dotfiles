@@ -1,6 +1,6 @@
 window-rule {
     match app-id="firefox$"
-    match app-id="obsidian"
+    match app-id="electron" title="Obsidian"
     open-maximized true
 }
 
