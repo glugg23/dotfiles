@@ -29,6 +29,8 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
+  xdg.configFile.kdeglobals.source = "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
+
   dconf = {
     enable = true;
     settings = {
@@ -44,7 +46,16 @@
       name = "Breeze-Dark";
       package = pkgs.kdePackages.breeze-gtk;
     };
+    iconTheme = {
+      name = "breeze-dark";
+      package = pkgs.kdePackages.breeze-icons;
+    };
     gtk4.theme = null;
+  };
+
+  qt = {
+    enable = true;
+    style.name = "breeze";
   };
 
   home.pointerCursor = {
