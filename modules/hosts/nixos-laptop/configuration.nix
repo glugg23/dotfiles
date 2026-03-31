@@ -10,7 +10,6 @@
     ./hardware-configuration.nix
     ../../dm/ly.nix
     ../../wm/wayland/niri/nixos.nix
-    ../../fuzzel/nixos.nix
     ../../pipewire.nix
     ../../spotify
   ];

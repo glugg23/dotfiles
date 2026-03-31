@@ -5,7 +5,7 @@
     ../../wm/wayland/niri/home.nix
     ../../easyeffects.nix
     ../../firefox.nix
-    ../../fuzzel/home.nix
+    ../../fuzzel.nix
     ../../kitty.nix
     ../../mpv.nix
     ../../waybar.nix
