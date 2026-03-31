@@ -6,6 +6,7 @@
     ../../easyeffects.nix
     ../../firefox.nix
     ../../fuzzel.nix
+    ../../hyprlock.nix
     ../../kitty.nix
     ../../mpv.nix
     ../../waybar.nix
