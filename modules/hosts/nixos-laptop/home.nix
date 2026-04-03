@@ -18,11 +18,11 @@
 
   home.packages =
     let
-      swww-background = pkgs.callPackage ../../scripts/swww-background.nix {
+      awww-background = pkgs.callPackage ../../scripts/awww-background.nix {
         homeDirectory = config.home.homeDirectory;
       };
     in
-    [ swww-background ];
+    [ awww-background ];
 
   xdg.portal = {
     enable = true;

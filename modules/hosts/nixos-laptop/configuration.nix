@@ -106,6 +106,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    awww
     brightnessctl
     fastfetch
     gimp
@@ -118,7 +119,6 @@
     qbittorrent
     tree
     swaynotificationcenter
-    swww
     vesktop
     vim
     yazi

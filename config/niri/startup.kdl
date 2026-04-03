@@ -2,5 +2,5 @@ hotkey-overlay {
     skip-at-startup
 }
 
-spawn-at-startup "swww-background.sh"
+spawn-at-startup "awww-background.sh"
 spawn-at-startup "waybar"
