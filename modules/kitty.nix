@@ -16,6 +16,7 @@
       "enable_audio_bell" = false;
       "window_padding_width" = 6;
       "touch_scroll_multiplier" = 5.0;
+      "disable_ligatures" = "always";
     };
   };
 }
