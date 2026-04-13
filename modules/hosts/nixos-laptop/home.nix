@@ -10,7 +10,7 @@
     ../../kitty.nix
     ../../mpv.nix
     ../../waybar.nix
-    ../../zsh.nix
+    ../../zsh/home.nix
   ];
 
   home.username = "max";

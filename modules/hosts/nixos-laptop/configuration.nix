@@ -12,6 +12,7 @@
     ../../wm/wayland/niri/nixos.nix
     ../../pipewire.nix
     ../../spotify
+    ../../zsh
   ];
 
   spotify.custom.enable = true;
@@ -99,7 +100,6 @@
     shell = pkgs.zsh;
   };
 
-  programs.zsh.enable = true;
   programs.steam.enable = true;
   programs.nh = {
     enable = true;
