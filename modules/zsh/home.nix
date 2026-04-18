@@ -11,7 +11,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     shellAliases = {
-      update = "nix flake update --flake ~/dotfiles";
+      nixos-update = "nix flake update --flake ~/dotfiles --commit-lock-file && nh os switch -a";
     };
     sessionVariables = {
       EDITOR = "vim";
