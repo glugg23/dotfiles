@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ../../dm/ly.nix
     ../../wm/wayland/niri/nixos.nix
+    ../../nh.nix
     ../../pipewire.nix
     ../../spotify
     ../../zsh
@@ -101,10 +102,6 @@
   };
 
   programs.steam.enable = true;
-  programs.nh = {
-    enable = true;
-    flake = "/home/max/dotfiles";
-  };
 
   environment.systemPackages = with pkgs; [
     awww
