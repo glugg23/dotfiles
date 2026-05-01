@@ -3,6 +3,6 @@
 {
   programs.nh = {
     enable = true;
-    flake = "~/dotfiles";
+    flake = "/home/max/dotfiles";
   };
 }
