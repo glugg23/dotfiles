@@ -17,6 +17,7 @@
       "window_padding_width" = 6;
       "touch_scroll_multiplier" = 5.0;
       "disable_ligatures" = "always";
+      "background_opacity" = 0.8;
     };
   };
 }
