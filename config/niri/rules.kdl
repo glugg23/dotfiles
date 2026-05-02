@@ -40,3 +40,12 @@ layer-rule {
     match namespace="^awww-daemonoverlay$"
     place-within-backdrop true
 }
+
+layer-rule {
+    match namespace="^launcher$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}

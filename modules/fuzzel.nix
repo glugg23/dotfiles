@@ -15,12 +15,12 @@
           grn = "a7c080ff";
         in
         {
-          background = "272e33ff";
+          background = "272e3399";
           text = fg;
           prompt = fg;
           input = fg;
           match = ylw;
-          selection = "3c4841ff";
+          selection = "3c484188";
           selection-text = grn;
           selection-match = ylw;
           border = grn;
