@@ -16,6 +16,10 @@
     ../../zsh
   ];
 
+  nixpkgs.overlays = [
+    (import ../../overlays/dolphin.nix)
+  ];
+
   spotify.custom.enable = true;
 
   hardware.bluetooth.enable = true;
@@ -110,6 +114,7 @@
     gimp
     git
     kdePackages.dolphin
+    kdePackages.ffmpegthumbs
     libreoffice-qt-fresh
     obsidian
     pavucontrol
