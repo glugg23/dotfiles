@@ -10,6 +10,9 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
+
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
   outputs =
     inputs@{
@@ -19,6 +22,7 @@
       nixpkgs-darwin,
       nix-darwin,
       nixos-hardware,
+      disko,
       ...
     }:
     {
@@ -35,6 +39,21 @@
             };
           }
           nixos-hardware.nixosModules.framework-amd-ai-300-series
+        ];
+      };
+      nixosConfigurations.nixos-vm = nixpkgs-unstable.lib.nixosSystem {
+        modules = [
+          disko.nixosModules.disko
+          ./modules/hosts/nixos-vm/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "bak";
+              users.max = ./modules/hosts/nixos-vm/home.nix;
+            };
+          }
         ];
       };
       formatter.x86_64-linux = nixpkgs-unstable.legacyPackages.x86_64-linux.nixfmt-tree;
