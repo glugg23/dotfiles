@@ -123,7 +123,6 @@
     tree
     swaynotificationcenter
     vesktop
-    vim
     yazi
   ];
 

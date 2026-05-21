@@ -2,14 +2,15 @@
 
 {
   imports = [
-    ../../wm/wayland/niri/home.nix
     ../../easyeffects.nix
     ../../firefox.nix
     ../../fuzzel.nix
     ../../hyprlock.nix
     ../../kitty.nix
     ../../mpv.nix
+    ../../vim.nix
     ../../waybar.nix
+    ../../wm/wayland/niri/home.nix
     ../../zsh/home.nix
   ];
 
