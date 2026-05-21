@@ -32,11 +32,18 @@ set ignorecase
 set smartcase
 
 set undofile
-set backupdir=~/.vim/.backup//
-set directory=~/.vim/.swp//
-set undodir=~/.vim/.undo//
 set autochdir
 set history=1000
 set autoread
 set wildmenu
 set wildmode=longest:list,full
+
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim/.backup", "p")
+    call mkdir($HOME."/.vim/.swp", "p")
+    call mkdir($HOME."/.vim/.undo", "p")
+endif
+
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
+set undodir=~/.vim/.undo//
