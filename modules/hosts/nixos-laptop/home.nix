@@ -8,6 +8,7 @@
     ../../hyprlock.nix
     ../../kitty.nix
     ../../mpv.nix
+    ../../neovim.nix
     ../../vim.nix
     ../../waybar.nix
     ../../wm/wayland/niri/home.nix
