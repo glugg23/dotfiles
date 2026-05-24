@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "everforest-nvim": {
+      "rev": "d235ca0aa6a29546e661a020e2618612acbbffbe",
+      "src": "https://github.com/neanias/everforest-nvim"
+    }
+  }
+}
