@@ -20,8 +20,6 @@
     (import ../../overlays/dolphin.nix)
   ];
 
-  spotify.custom.enable = true;
-
   hardware.bluetooth.enable = true;
 
   boot.loader.limine.enable = true;
