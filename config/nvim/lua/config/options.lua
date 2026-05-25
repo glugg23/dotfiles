@@ -28,3 +28,8 @@ set.wildmenu = true
 set.wildmode = "longest:list,full"
 
 set.undofile = true
+
+set.complete:append("o")
+set.completeopt = { "menuone", "noselect", "popup" }
+set.pumheight = 5
+set.pummaxwidth = 40
