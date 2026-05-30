@@ -1,6 +1,7 @@
 vim.lsp.config("elixirls", {
   cmd = { "elixir-ls" },
   root_markers = { "mix.exs" },
+  workspace_required = true,
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
