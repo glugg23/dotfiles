@@ -6,6 +6,8 @@ vim.pack.add({
   "https://github.com/neanias/everforest-nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/nvim-telescope/telescope.nvim",
+  "https://github.com/tpope/vim-fugitive",
+  "https://github.com/brenoprata10/nvim-highlight-colors",
 })
 
 require("everforest").setup({
@@ -15,3 +17,4 @@ require("everforest").setup({
 vim.cmd("colorscheme everforest")
 
 require("lualine").setup()
+require("nvim-highlight-colors").setup()
