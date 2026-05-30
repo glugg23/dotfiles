@@ -1,5 +1,9 @@
 vim.pack.add({
-  "https://github.com/neanias/everforest-nvim"
+  -- dependencies
+  "https://github.com/nvim-tree/nvim-web-devicons",
+  -- plugins
+  "https://github.com/neanias/everforest-nvim",
+  "https://github.com/nvim-lualine/lualine.nvim",
 })
 
 require("everforest").setup({
@@ -7,3 +11,5 @@ require("everforest").setup({
   ui_contrast = "high",
 })
 vim.cmd("colorscheme everforest")
+
+require("lualine").setup()
