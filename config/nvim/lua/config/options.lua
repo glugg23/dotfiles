@@ -12,6 +12,7 @@ set.expandtab = true
 set.softtabstop = 4
 
 set.number = true
+set.relativenumber = true
 set.cursorline = true
 set.wrap = true
 set.linebreak = true
@@ -23,7 +24,6 @@ set.showmatch = true
 set.ignorecase = true
 set.smartcase = true
 
-set.autochdir = true
 set.wildmenu = true
 set.wildmode = "longest:list,full"
 

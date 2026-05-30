@@ -1,5 +1,5 @@
 require("config.options")
+require("config.plugins")
 require("config.keybinds")
 require("config.treesitter")
 require("config.lsp")
-require("config.plugins")
