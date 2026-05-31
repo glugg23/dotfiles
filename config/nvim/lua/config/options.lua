@@ -33,3 +33,5 @@ set.complete:append("o")
 set.completeopt = { "menuone", "noselect", "popup" }
 set.pumheight = 5
 set.pummaxwidth = 40
+
+set.fillchars = { eob = ' ' }

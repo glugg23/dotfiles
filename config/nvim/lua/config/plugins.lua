@@ -15,11 +15,22 @@ vim.pack.add({
   "https://github.com/brenoprata10/nvim-highlight-colors",
 })
 
-require("everforest").setup({
+local everforest = require("everforest")
+everforest.setup({
   background = "hard",
   ui_contrast = "high",
+  on_highlights = function(hl, palette)
+    hl.NeoTreeNormal = { bg = palette.bg }
+    hl.NeoTreeEndOfBuffer = { bg = palette.bg }
+  end,
 })
-vim.cmd("colorscheme everforest")
+everforest.load()
 
-require("lualine").setup()
+require("lualine").setup({
+  options = {
+    disabled_filetypes = {
+      statusline = { "neo-tree" },
+    },
+  },
+})
 require("nvim-highlight-colors").setup()
