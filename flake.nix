@@ -10,6 +10,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
+    nixos-hardware.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -41,6 +42,7 @@
           nixos-hardware.nixosModules.framework-amd-ai-300-series
         ];
       };
+
       nixosConfigurations.nixos-vm = nixpkgs-unstable.lib.nixosSystem {
         modules = [
           disko.nixosModules.disko
@@ -56,6 +58,7 @@
           }
         ];
       };
+
       formatter.x86_64-linux = nixpkgs-unstable.legacyPackages.x86_64-linux.nixfmt-tree;
       formatter.aarch64-darwin = nixpkgs-darwin.legacyPackages.aarch64-darwin.nixfmt-tree;
     };
