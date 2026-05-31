@@ -36,6 +36,11 @@ in
     withPython3 = false;
   };
 
+  home.packages = with pkgs; [
+    fd
+    ripgrep
+  ];
+
   xdg.configFile."nvim" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/config/nvim";
     recursive = true;
