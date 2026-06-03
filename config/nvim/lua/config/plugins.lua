@@ -11,6 +11,7 @@ vim.pack.add({
     src = "https://github.com/nvim-neo-tree/neo-tree.nvim",
     version = vim.version.range("3")
   },
+  "https://github.com/hiphish/rainbow-delimiters.nvim",
   "https://github.com/tpope/vim-fugitive",
   "https://github.com/brenoprata10/nvim-highlight-colors",
 })
