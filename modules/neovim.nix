@@ -6,8 +6,19 @@
 }:
 
 let
+  tree-sitter-nix = pkgs.tree-sitter.builtGrammars."tree-sitter-nix".overrideAttrs {
+    version = "0.5.0";
+    src = pkgs.fetchFromGitHub {
+      owner = "numtide";
+      repo = "tree-sitter-nix";
+      rev = "v0.5.0";
+      hash = "sha256-oeFnUuaq+OtpzGG/HLYY6eRpvP35LhMWnltAfRoyBug=";
+    };
+  };
+
   treeSitterGrammars = [
     pkgs.tree-sitter.builtGrammars."tree-sitter-elixir"
+    tree-sitter-nix
   ];
 
   treeSitterParsers = pkgs.tree-sitter.withPlugins (_: treeSitterGrammars);
