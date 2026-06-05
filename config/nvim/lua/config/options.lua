@@ -35,3 +35,6 @@ set.pumheight = 5
 set.pummaxwidth = 40
 
 set.fillchars = { eob = ' ' }
+
+set.splitright = true
+set.splitbelow = true
