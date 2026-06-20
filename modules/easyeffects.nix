@@ -30,6 +30,12 @@ in
         device-profile = "Analog Output";
         preset-name = "disabled";
       }
+      {
+        device = "alsa_output.usb-KTMicro_Chu2_DSP_2020-02-20-0000-0000-0000-00.analog-stereo";
+        device-description = "Chu2 DSP Analog Stereo";
+        device-profile = "Analog Output";
+        preset-name = "disabled";
+      }
     ]
   );
 
