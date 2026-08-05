@@ -9,10 +9,11 @@
   imports = [
     ./hardware-configuration.nix
     ../../dm/ly.nix
-    ../../wm/wayland/niri/nixos.nix
+    ../../lid-guard.nix
     ../../nh.nix
     ../../pipewire.nix
     ../../spotify
+    ../../wm/wayland/niri/nixos.nix
     ../../zsh
   ];
 
@@ -88,6 +89,12 @@
   services.mullvad-vpn = {
     enable = true;
     gui.enable = true;
+  };
+
+  services.fprintd.lid-guard = {
+    enable = true;
+    lidPath = "LID0";
+    extraPamServices = [ "login" ];
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
