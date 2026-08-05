@@ -49,6 +49,11 @@ layer-rule {
 }
 
 layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}
+
+layer-rule {
     match namespace="^launcher$"
 
     background-effect {

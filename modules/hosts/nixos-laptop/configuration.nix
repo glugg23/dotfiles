@@ -93,6 +93,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
   services.flatpak.enable = true;
+  services.upower.enable = true;
 
   users.users.max = {
     isNormalUser = true;
@@ -115,12 +116,13 @@
     kdePackages.dolphin
     kdePackages.ffmpegthumbs
     libreoffice-qt-fresh
+    noctalia
     obsidian
     pavucontrol
     playerctl
     qbittorrent
-    tree
     swaynotificationcenter
+    tree
     vesktop
     yazi
   ];
