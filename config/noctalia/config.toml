@@ -1,0 +1,27 @@
+[backdrop]
+enabled = true
+
+[bar.default]
+center = []
+font_family = "JetBrainsMono NF"
+font_weight = 700
+margin_ends = 0
+radius = 0
+scale = 1.10
+start = [ "clock", "spacer_2", "launcher", "wallpaper", "workspaces" ]
+
+[theme]
+community_palette = "Everforest"
+source = "community"
+
+[wallpaper]
+directory = "/home/max/Pictures/Wallpapers"
+
+    [wallpaper.default]
+    path = "/home/max/Pictures/Wallpapers/garden_of_words_laptop.jpg"
+
+[widget.clock]
+format = "{:%r}"
+
+[widget.spacer_2]
+type = "spacer"
