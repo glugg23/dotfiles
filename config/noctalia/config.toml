@@ -2,13 +2,52 @@
 enabled = true
 
 [bar.default]
-center = []
+center = [ "group:g1" ]
+end = [ "group:g2", "group:g4" ]
 font_family = "JetBrainsMono NF"
 font_weight = 700
 margin_ends = 0
 radius = 0
 scale = 1.10
-start = [ "clock", "spacer_2", "launcher", "wallpaper", "workspaces" ]
+start = [ "group:g3", "workspaces", "tray" ]
+
+    [bar.default.dead_zone.actions]
+    left = "panel-toggle control-center home"
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "audio_visualizer", "media", "audio_visualizer" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g2"
+    members = [ "volume", "brightness", "battery", "network" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g3"
+    members = [ "session", "control-center", "notifications", "launcher" ]
+    opacity = 1.0
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g4"
+    members = [ "date", "clock" ]
+    opacity = 1.0
+    padding = 6.0
+
+[shell]
+time_format = "{:%I:%M}"
 
 [theme]
 community_palette = "Everforest"
@@ -21,7 +60,17 @@ directory = "/home/max/Pictures/Wallpapers"
     path = "/home/max/Pictures/Wallpapers/garden_of_words_laptop.jpg"
 
 [widget.clock]
-format = "{:%r}"
+format = "{:%I:%M:%S %p}"
 
-[widget.spacer_2]
-type = "spacer"
+[widget.media]
+hide_album_art = true
+hide_when_no_media = true
+
+[widget.network]
+show_label = false
+
+[widget.tray]
+capsule = true
+
+[widget.workspaces]
+capsule = true
