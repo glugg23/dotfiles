@@ -124,7 +124,6 @@
     libreoffice-qt-fresh
     noctalia
     obsidian
-    playerctl
     qbittorrent
     tree
     vesktop
