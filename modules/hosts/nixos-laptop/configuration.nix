@@ -128,7 +128,6 @@
     pavucontrol
     playerctl
     qbittorrent
-    swaynotificationcenter
     tree
     vesktop
     yazi
