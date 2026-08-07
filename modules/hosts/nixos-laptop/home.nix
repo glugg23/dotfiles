@@ -4,7 +4,6 @@
   imports = [
     ../../easyeffects.nix
     ../../firefox.nix
-    ../../fuzzel.nix
     ../../kitty.nix
     ../../mpv.nix
     ../../neovim.nix
