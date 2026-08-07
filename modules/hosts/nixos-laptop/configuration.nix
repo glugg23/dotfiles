@@ -115,7 +115,6 @@
   programs.direnv.enable = true;
 
   environment.systemPackages = with pkgs; [
-    awww
     brightnessctl
     fastfetch
     gimp

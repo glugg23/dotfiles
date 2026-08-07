@@ -44,11 +44,6 @@ window-rule {
 }
 
 layer-rule {
-    match namespace="^awww-daemonoverlay$"
-    place-within-backdrop true
-}
-
-layer-rule {
   match namespace="^noctalia-backdrop"
   place-within-backdrop true
 }
