@@ -10,7 +10,6 @@
     ../../neovim.nix
     ../../noctalia.nix
     ../../vim.nix
-    ../../waybar.nix
     ../../wm/wayland/niri/home.nix
     ../../zsh/home.nix
   ];
