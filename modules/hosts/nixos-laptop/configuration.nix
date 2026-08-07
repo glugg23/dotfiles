@@ -124,7 +124,6 @@
     libreoffice-qt-fresh
     noctalia
     obsidian
-    pavucontrol
     playerctl
     qbittorrent
     tree
