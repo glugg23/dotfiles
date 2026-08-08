@@ -118,6 +118,7 @@
     fastfetch
     gimp
     git
+    kdePackages.ark
     kdePackages.dolphin
     kdePackages.ffmpegthumbs
     libreoffice-qt-fresh
