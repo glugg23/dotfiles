@@ -7,7 +7,7 @@
     ../../kitty.nix
     ../../mpv.nix
     ../../neovim.nix
-    ../../noctalia.nix
+    ../../noctalia/home.nix
     ../../vim.nix
     ../../wm/wayland/niri/home.nix
     ../../zsh/home.nix

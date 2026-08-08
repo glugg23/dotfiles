@@ -65,6 +65,7 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
     timeout = 660.0
 
 [shell]
+polkit_agent = true
 time_format = "{:%I:%M}"
 
 [theme]

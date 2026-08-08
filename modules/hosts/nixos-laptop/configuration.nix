@@ -8,9 +8,9 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../dm/ly.nix
     ../../lid-guard.nix
     ../../nh.nix
+    ../../noctalia/nixos.nix
     ../../pipewire.nix
     ../../spotify
     ../../wm/wayland/niri/nixos.nix
@@ -121,7 +121,6 @@
     kdePackages.dolphin
     kdePackages.ffmpegthumbs
     libreoffice-qt-fresh
-    noctalia
     obsidian
     qbittorrent
     tree
