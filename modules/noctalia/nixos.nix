@@ -3,6 +3,11 @@
 let
   toml = pkgs.formats.toml { };
   greeter-config = toml.generate "greeter.toml" {
+    cursor = {
+      theme = "capitaine-cursors";
+      size = 24;
+      path = "${pkgs.capitaine-cursors}/share/icons";
+    };
     auth.allow_empty_password = true;
   };
 in
