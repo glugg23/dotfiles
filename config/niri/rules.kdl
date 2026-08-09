@@ -27,8 +27,9 @@ window-rule {
 }
 
 window-rule {
-    match app-id="org.qbittorrent.qBittorrent"
-    default-column-width { proportion 0.66; }
+    match app-id="org.qbittorrent.qBittorrent" title="Remove torrent(s)"
+    default-column-width { fixed 660; }
+    default-window-height { fixed 160; }
 }
 
 window-rule {
