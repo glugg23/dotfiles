@@ -123,6 +123,7 @@
     kdePackages.ffmpegthumbs
     libreoffice-qt-fresh
     obsidian
+    pavucontrol
     qbittorrent
     tree
     vesktop
