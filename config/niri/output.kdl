@@ -19,4 +19,5 @@ output "ASUSTek COMPUTER INC ASUS VG249 0x00000B2E" {
 
 output "Dell Inc. DELL S2725DC DQ5QQC4" {
     mode "2560x1440@143.973"
+    position x=1440 y=-480
 }
