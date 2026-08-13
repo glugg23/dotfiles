@@ -15,7 +15,7 @@
       nixos-clean = "nh clean all -k 10 -K 7d --optimise -a";
     };
     sessionVariables = {
-      EDITOR = "vim";
+      EDITOR = "nvim";
     };
   };
 }
