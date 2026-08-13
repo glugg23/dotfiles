@@ -101,6 +101,7 @@
   services.libinput.enable = true;
   services.flatpak.enable = true;
   services.upower.enable = true;
+  services.tailscale.enable = true;
 
   users.users.max = {
     isNormalUser = true;
