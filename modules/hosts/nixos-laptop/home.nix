@@ -8,6 +8,7 @@
     ../../mpv.nix
     ../../neovim.nix
     ../../noctalia/home.nix
+    ../../podman/home.nix
     ../../vim.nix
     ../../wm/wayland/niri/home.nix
     ../../zsh/home.nix
