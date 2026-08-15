@@ -61,12 +61,15 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
 
     [idle.behavior.screen-off]
     action = "screen_off"
-    enabled = true
+    enabled = false
     timeout = 660.0
 
 [shell]
 polkit_agent = true
 time_format = "{:%I:%M}"
+
+    [shell.launcher.providers.session]
+    global = true
 
 [theme]
 community_palette = "Everforest"
