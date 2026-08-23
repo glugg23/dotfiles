@@ -13,6 +13,7 @@ vim.pack.add({
   },
   "https://github.com/hiphish/rainbow-delimiters.nvim",
   "https://github.com/tpope/vim-fugitive",
+  "https://github.com/lewis6991/gitsigns.nvim",
   "https://github.com/brenoprata10/nvim-highlight-colors",
 })
 

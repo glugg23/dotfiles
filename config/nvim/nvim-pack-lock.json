@@ -4,6 +4,10 @@
       "rev": "d235ca0aa6a29546e661a020e2618612acbbffbe",
       "src": "https://github.com/neanias/everforest-nvim"
     },
+    "gitsigns.nvim": {
+      "rev": "5be654f2232c10ddcad19c1607a67b6b4b78fc29",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
     "lualine.nvim": {
       "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
