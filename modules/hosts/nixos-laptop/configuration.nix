@@ -123,7 +123,7 @@
     kdePackages.ark
     kdePackages.dolphin
     kdePackages.ffmpegthumbs
-    libreoffice-qt-fresh
+    libreoffice-qt-stable
     obsidian
     pavucontrol
     qbittorrent
