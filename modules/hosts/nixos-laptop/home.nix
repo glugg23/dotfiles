@@ -19,7 +19,7 @@
 
   xdg.portal = {
     enable = true;
-    configPackages = [ pkgs.xdg-desktop-portal-gtk ];
+    configPackages = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
