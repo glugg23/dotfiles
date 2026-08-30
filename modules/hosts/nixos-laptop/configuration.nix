@@ -137,7 +137,6 @@
     noto-fonts-cjk-sans
   ];
 
-  services.openssh.enable = true;
   services.avahi = {
     enable = true;
     publish = {
