@@ -27,6 +27,8 @@
       ...
     }:
     {
+      packages.x86_64-linux.default = self.nixosConfigurations.iso.config.system.build.isoImage;
+
       nixosConfigurations.nixos-laptop = nixpkgs-unstable.lib.nixosSystem {
         modules = [
           ./modules/hosts/nixos-laptop/configuration.nix
@@ -40,6 +42,20 @@
             };
           }
           nixos-hardware.nixosModules.framework-amd-ai-300-series
+        ];
+      };
+
+      nixosConfigurations.iso = nixpkgs-unstable.lib.nixosSystem {
+        modules = [
+          ./modules/hosts/iso/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.nixos = ./modules/hosts/iso/home.nix;
+            };
+          }
         ];
       };
 
