@@ -9,6 +9,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../lid-guard.nix
+    ../../limine.nix
     ../../nh.nix
     ../../noctalia/nixos.nix
     ../../pipewire.nix
@@ -23,9 +24,6 @@
   ];
 
   hardware.bluetooth.enable = true;
-
-  boot.loader.limine.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
