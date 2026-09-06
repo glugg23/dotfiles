@@ -1,4 +1,9 @@
-{ writeShellApplication, git, gum, disko }:
+{
+  writeShellApplication,
+  git,
+  gum,
+  disko,
+}:
 
 writeShellApplication {
   name = "nixos-installer";

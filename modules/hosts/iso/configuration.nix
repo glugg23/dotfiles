@@ -15,7 +15,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    (callPackage ../../scripts/nixos-installer.nix {})
+    (callPackage ../../scripts/nixos-installer.nix { })
     disko
     htop
     tree
