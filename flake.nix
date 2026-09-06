@@ -29,6 +29,21 @@
     {
       packages.x86_64-linux.default = self.nixosConfigurations.iso.config.system.build.isoImage;
 
+      nixosConfigurations.nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
+        modules = [
+          ./modules/hosts/nixos-desktop/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "bak";
+              users.max = ./modules/hosts/nixos-desktop/home.nix;
+            };
+          }
+        ];
+      };
+
       nixosConfigurations.nixos-laptop = nixpkgs-unstable.lib.nixosSystem {
         modules = [
           ./modules/hosts/nixos-laptop/configuration.nix
