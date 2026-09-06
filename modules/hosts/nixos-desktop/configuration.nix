@@ -10,6 +10,11 @@
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  hardware.nvidia = {
+    open = true;
+    modesetting.enable = true;
+  };
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   networking.hostName = "nixos-desktop";
   networking.networkmanager.enable = true;
