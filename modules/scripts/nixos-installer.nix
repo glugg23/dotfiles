@@ -46,5 +46,10 @@ writeShellApplication {
       "$HOME/dotfiles/modules/hosts/$TARGET_HOST/disko.nix"
 
     sudo nixos-install --flake "$HOME/dotfiles#$TARGET_HOST"
+
+    echo "Copying dotfiles to home"
+    cp -r "$HOME/dotfiles" /mnt/home/max/ && sudo nixos-enter --root /mnt -c 'chown -R max:users /home/max/dotfiles'
+    echo "Setting password for account"
+    sudo nixos-enter --root /mnt -c 'passwd max'
   '';
 }
