@@ -27,6 +27,7 @@
 
   i18n.defaultLocale = "en_GB.UTF-8";
   console.keyMap = "uk";
+  services.xserver.xkb.layout = "gb";
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -34,12 +35,6 @@
 
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb = {
-  #   layout = "gb";
-  #   variant = "";
-  # };
 
   users.users."max" = {
     isNormalUser = true;
