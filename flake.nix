@@ -31,6 +31,7 @@
 
       nixosConfigurations.nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
         modules = [
+          disko.nixosModules.disko
           ./modules/hosts/nixos-desktop/configuration.nix
           home-manager.nixosModules.home-manager
           {
