@@ -17,6 +17,9 @@
   };
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  fileSystems."/tmp".fsType = "tmpfs";
+  zramSwap.enable = true;
+
   networking.hostName = "nixos-desktop";
   networking.networkmanager.enable = true;
 
