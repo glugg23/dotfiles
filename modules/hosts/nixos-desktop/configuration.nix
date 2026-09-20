@@ -11,6 +11,13 @@
     ../../zsh
   ];
 
+  boot.loader.limine.extraEntries = ''
+    /CachyOS
+    comment: CachyOS
+    protocol: efi
+    path: uuid(1c088854-8d4d-4a4a-9b31-510361bb1565):/EFI/BOOT/BOOTX64.EFI
+  '';
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
   hardware.nvidia = {
     open = true;
