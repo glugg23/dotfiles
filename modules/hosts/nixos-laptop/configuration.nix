@@ -9,6 +9,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../fonts.nix
+    ../../git
     ../../lid-guard.nix
     ../../limine.nix
     ../../nh.nix
@@ -118,7 +119,6 @@
   environment.systemPackages = with pkgs; [
     fastfetch
     gimp
-    git
     kdePackages.ark
     kdePackages.dolphin
     kdePackages.ffmpegthumbs
