@@ -4,6 +4,7 @@
   imports = [
     ./disko.nix
     ./hardware-configuration.nix
+    ../../git
     ../../limine.nix
     ../../nh.nix
     ../../pipewire.nix
@@ -48,7 +49,6 @@
 
   environment.systemPackages = with pkgs; [
     fastfetch
-    git
     tree
   ];
 

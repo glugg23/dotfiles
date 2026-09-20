@@ -3,6 +3,7 @@
 {
   imports = [
     ../../firefox.nix
+    ../../git/home.nix
     ../../kitty.nix
     ../../neovim.nix
     ../../zsh/home.nix
