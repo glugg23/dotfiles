@@ -1,8 +1,8 @@
 {
   disko.devices = {
     disk = {
-      vda = {
-        device = "/dev/vda";
+      nvme0n1 = {
+        device = "/dev/disk/by-id/nvme-INTEL_SSDPEKNW010T8_BTNH916506W91P0B";
         type = "disk";
         content = {
           type = "gpt";
