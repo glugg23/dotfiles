@@ -8,6 +8,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../fonts.nix
     ../../lid-guard.nix
     ../../limine.nix
     ../../nh.nix
@@ -128,11 +129,6 @@
     tree
     vesktop
     yazi
-  ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    noto-fonts-cjk-sans
   ];
 
   services.avahi = {

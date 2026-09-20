@@ -4,6 +4,7 @@
   imports = [
     ./disko.nix
     ./hardware-configuration.nix
+    ../../fonts.nix
     ../../git
     ../../limine.nix
     ../../nh.nix
