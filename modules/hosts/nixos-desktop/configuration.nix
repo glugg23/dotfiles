@@ -45,6 +45,8 @@
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  programs.steam.enable = true;
+
   users.users."max" = {
     isNormalUser = true;
     extraGroups = [
@@ -58,6 +60,8 @@
   environment.systemPackages = with pkgs; [
     fastfetch
     tree
+    vesktop
+    vscodium-fhs
   ];
 
   # Enable the OpenSSH daemon.
