@@ -35,10 +35,13 @@
         let
           default = {
             installation_mode = "force_installed";
-            updates_disabled = true;
+            default_area = "menupanel";
           };
           private = default // {
             private_browsing = true;
+          };
+          important = private // {
+            default_area = "navbar";
           };
           installExtention =
             name: config:
@@ -49,11 +52,12 @@
         in
         {
           "*".installation_mode = "blocked";
-          "uBlock0@raymondhill.net" = installExtention "ublock-origin" private;
-          "{446900e4-71c2-419f-a6a7-df9c091e268b}" = installExtention "bitwarden-password-manager" default;
-          "jid1-xUfzOsOFlzSOXg@jetpack" = installExtention "reddit-enhancement-suite" private;
+          "uBlock0@raymondhill.net" = installExtention "ublock-origin" important;
+          "{446900e4-71c2-419f-a6a7-df9c091e268b}" = installExtention "bitwarden-password-manager" important;
+          "jid1-xUfzOsOFlzSOXg@jetpack" = installExtention "reddit-enhancement-suite" default;
           "sponsorBlocker@ajay.app" = installExtention "sponsorblock" private;
           "firefox@betterttv.net" = installExtention "betterttv" default;
+          "addon@darkreader.org" = installExtention "darkreader" default;
         };
     };
 
@@ -75,6 +79,25 @@
         "privacy.userContext.enabled" = false;
         "privacy.userContext.ui.enabled" = false;
       };
+
+      # Customises nav bar element placement.
+      # Doesn't fully work and resets any changes but order is what I want
+      # settings."browser.uiCustomization.state" = builtins.toJSON {
+      #   placements.nav-bar = [
+      #     "back-button"
+      #     "forward-button"
+      #     "stop-reload-button"
+      #     "home-button"
+      #     "urlbar-container"
+      #     "history-panelmenu"
+      #     "downloads-button"
+      #     "developer-button"
+      #     "ublock0_raymondhill_net-browser-action"
+      #     "_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action"
+      #     "unified-extensions-button"
+      #     "reset-pbm-toolbar-button"
+      #   ];
+      # };
 
       search = {
         force = true;
