@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../cursor.nix
     ../../firefox.nix
     ../../git/home.nix
     ../../kitty.nix
