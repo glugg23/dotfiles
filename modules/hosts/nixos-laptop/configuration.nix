@@ -16,7 +16,6 @@
     ../../noctalia/nixos.nix
     ../../pipewire.nix
     ../../podman/nixos.nix
-    ../../spotify
     ../../wm/wayland/niri/nixos.nix
     ../../zsh
   ];
@@ -126,6 +125,7 @@
     obsidian
     pavucontrol
     qbittorrent
+    spotify
     tree
     vesktop
     yazi

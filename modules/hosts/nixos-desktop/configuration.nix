@@ -59,6 +59,7 @@
 
   environment.systemPackages = with pkgs; [
     fastfetch
+    spotify
     tree
     vesktop
     vscodium-fhs
