@@ -13,7 +13,7 @@
             {
               matches = [
                 {
-                  "node.name" = "alsa_output.usb-GuangZhou_FiiO_Electronics_Co._Ltd_FiiO_K7-00.analog-stereo";
+                  "node.name" = "alsa_output.pci-0000_0c_00.4.iec958-stereo";
                 }
               ];
               actions = {
