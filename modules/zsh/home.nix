@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.zsh = {
@@ -10,10 +10,16 @@
     };
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    shellAliases = {
-      nixos-update = "nix flake update --flake ~/dotfiles --commit-lock-file && nh os switch -a";
-      nixos-clean = "nh clean all -k 10 -K 7d --optimise -a";
-    };
+    shellAliases = lib.mkMerge [
+      {
+        nixos-update = "nix flake update --flake ~/dotfiles --commit-lock-file && nh os switch -a";
+        nixos-clean = "nh clean all -k 10 -K 7d --optimise -a";
+      }
+
+      (lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
+        open = "xdg-open";
+      })
+    ];
     sessionVariables = {
       EDITOR = "nvim";
     };
