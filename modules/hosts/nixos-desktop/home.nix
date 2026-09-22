@@ -6,6 +6,7 @@
     ../../firefox.nix
     ../../git/home.nix
     ../../kitty.nix
+    ../../mpv.nix
     ../../neovim.nix
     ../../zsh/home.nix
   ];

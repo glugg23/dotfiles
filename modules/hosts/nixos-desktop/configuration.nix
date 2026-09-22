@@ -47,6 +47,11 @@
 
   programs.steam.enable = true;
 
+  services.mullvad-vpn = {
+    enable = true;
+    gui.enable = true;
+  };
+
   users.users."max" = {
     isNormalUser = true;
     extraGroups = [
@@ -59,6 +64,7 @@
 
   environment.systemPackages = with pkgs; [
     fastfetch
+    qbittorrent
     spotify
     tree
     vesktop
