@@ -9,6 +9,7 @@
     ../../limine.nix
     ../../nh.nix
     ../../pipewire.nix
+    ../../plymouth.nix
     ../../zsh
   ];
 
@@ -60,6 +61,7 @@
       "wheel"
     ];
     shell = pkgs.zsh;
+    initialPassword = "max"; # for build-vm
   };
 
   environment.systemPackages = with pkgs; [
@@ -79,6 +81,11 @@
     "flakes"
   ];
   nixpkgs.config.allowUnfree = true;
+
+  virtualisation.vmVariantWithBootLoader.virtualisation = {
+    cores = 4;
+    memorySize = 8192;
+  };
 
   system.stateVersion = "26.11";
 }
