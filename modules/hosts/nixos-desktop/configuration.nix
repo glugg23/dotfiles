@@ -47,6 +47,7 @@
   services.desktopManager.plasma6.enable = true;
 
   programs.steam.enable = true;
+  services.tailscale.enable = true;
 
   services.mullvad-vpn = {
     enable = true;
@@ -71,6 +72,8 @@
     tree
     vesktop
     vscodium-fhs
+    wineWow64Packages.stable
+    winetricks
   ];
 
   # Enable the OpenSSH daemon.
