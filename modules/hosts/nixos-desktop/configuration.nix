@@ -67,6 +67,8 @@
 
   environment.systemPackages = with pkgs; [
     fastfetch
+    itgmania
+    osu-lazer-bin
     qbittorrent
     spotify
     tree
