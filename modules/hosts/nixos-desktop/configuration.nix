@@ -70,6 +70,7 @@
     qbittorrent
     spotify
     tree
+    unrar
     vesktop
     vscodium-fhs
     wineWow64Packages.stable
