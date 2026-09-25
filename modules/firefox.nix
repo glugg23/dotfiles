@@ -68,6 +68,7 @@
         "browser.ai.control.translations" = "available";
         "browser.ctrlTab.sortByRecentlyUsed" = true;
         "browser.download.useDownloadDir" = false;
+        "browser.ml.linkPreview.enabled" = false;
         "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
         "browser.newtabpage.activity-stream.topSitesRows" = 2;
         "browser.tabs.loadBookmarksInBackground" = true;
