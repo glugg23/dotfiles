@@ -1,4 +1,4 @@
-{ ... }:
+{ hostname, ... }:
 
 {
   services.pipewire = {
@@ -13,7 +13,11 @@
             {
               matches = [
                 {
-                  "node.name" = "alsa_output.pci-0000_0c_00.4.iec958-stereo";
+                  "node.name" =
+                    if (hostname == "nixos-desktop") then
+                      "alsa_output.pci-0000_0c_00.4.iec958-stereo"
+                    else
+                      "alsa_output.usb-GuangZhou_FiiO_Electronics_Co._Ltd_FiiO_K7-00.analog-stereo";
                 }
               ];
               actions = {
