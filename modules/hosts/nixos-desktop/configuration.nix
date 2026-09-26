@@ -8,6 +8,7 @@
     ../../git
     ../../limine.nix
     ../../nh.nix
+    ../../nvidia.nix
     ../../pipewire.nix
     ../../plymouth.nix
     ../../zsh
@@ -21,11 +22,6 @@
   '';
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  hardware.nvidia = {
-    open = true;
-    modesetting.enable = true;
-  };
-  services.xserver.videoDrivers = [ "nvidia" ];
 
   fileSystems."/tmp".fsType = "tmpfs";
   zramSwap.enable = true;
