@@ -62,6 +62,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    (callPackage ../../scripts/switch-audio-profile.nix { })
     fastfetch
     itgmania
     osu-lazer-bin
