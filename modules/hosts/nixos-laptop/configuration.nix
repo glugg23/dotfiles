@@ -12,11 +12,11 @@
     ../../lid-guard.nix
     ../../limine.nix
     ../../nh.nix
+    ../../niri/nixos.nix
     ../../nix.nix
     ../../noctalia/nixos.nix
     ../../pipewire.nix
     ../../podman/nixos.nix
-    ../../wm/wayland/niri/nixos.nix
     ../../zsh
   ];
 

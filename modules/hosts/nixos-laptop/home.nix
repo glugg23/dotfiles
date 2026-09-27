@@ -9,10 +9,10 @@
     ../../kitty.nix
     ../../mpv.nix
     ../../neovim.nix
+    ../../niri/home.nix
     ../../noctalia/home.nix
     ../../podman/home.nix
     ../../vim.nix
-    ../../wm/wayland/niri/home.nix
     ../../zsh/home.nix
   ];
 
