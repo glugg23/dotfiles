@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -8,6 +8,7 @@
     ../../git
     ../../limine.nix
     ../../nh.nix
+    ../../nix.nix
     ../../nvidia.nix
     ../../pipewire.nix
     ../../plymouth.nix
@@ -30,19 +31,13 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/London";
-
   i18n.defaultLocale = "en_GB.UTF-8";
   console.keyMap = "uk";
   services.xserver.xkb.layout = "gb";
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  # services.xserver.enable = true;
-
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  programs.steam.enable = true;
   services.tailscale.enable = true;
 
   services.mullvad-vpn = {
@@ -50,16 +45,7 @@
     gui.enable = true;
   };
 
-  users.users."max" = {
-    isNormalUser = true;
-    extraGroups = [
-      "max"
-      "networkmanager"
-      "wheel"
-    ];
-    shell = pkgs.zsh;
-    initialPassword = "max"; # for build-vm
-  };
+  programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
     (callPackage ../../scripts/switch-audio-profile.nix { })
@@ -77,14 +63,16 @@
     winetricks
   ];
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-  nixpkgs.config.allowUnfree = true;
+  users.users."max" = {
+    isNormalUser = true;
+    extraGroups = [
+      "max"
+      "networkmanager"
+      "wheel"
+    ];
+    shell = pkgs.zsh;
+    initialPassword = "max"; # for build-vm
+  };
 
   virtualisation.vmVariantWithBootLoader.virtualisation = {
     cores = 4;
