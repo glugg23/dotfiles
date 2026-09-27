@@ -65,6 +65,7 @@
     (callPackage ../../scripts/switch-audio-profile.nix { })
     fastfetch
     itgmania
+    lutris
     osu-lazer-bin
     qbittorrent
     spotify
