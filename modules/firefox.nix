@@ -74,6 +74,7 @@
         "browser.tabs.loadBookmarksInBackground" = true;
         "browser.urlbar.trimURLs" = false;
         "browser.warnOnQuitShortcut" = false;
+        "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         "general.smoothScroll" = false;
         "intl.locale.requested" = "en-GB,en-US";
         "privacy.globalprivacycontrol.enabled" = true;
