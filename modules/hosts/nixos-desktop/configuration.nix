@@ -15,6 +15,10 @@
     ../../zsh
   ];
 
+  nixpkgs.overlays = [
+    (import ../../overlays/gallery-dl.nix)
+  ];
+
   boot.loader.limine.extraEntries = ''
     /CachyOS
     comment: CachyOS
@@ -60,6 +64,7 @@
   environment.systemPackages = with pkgs; [
     (callPackage ../../scripts/switch-audio-profile.nix { })
     fastfetch
+    gallery-dl
     itgmania
     lutris
     osu-lazer-bin
