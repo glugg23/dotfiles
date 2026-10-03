@@ -13,6 +13,7 @@
     ../../pipewire.nix
     ../../plymouth.nix
     ../../podman/nixos.nix
+    ../../virt-manager.nix
     ../../zsh
   ];
 
@@ -82,6 +83,7 @@
   users.users."max" = {
     isNormalUser = true;
     extraGroups = [
+      "libvirtd"
       "max"
       "networkmanager"
       "wheel"
