@@ -12,6 +12,7 @@
     ../../nvidia.nix
     ../../pipewire.nix
     ../../plymouth.nix
+    ../../podman/nixos.nix
     ../../zsh
   ];
 

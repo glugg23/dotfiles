@@ -8,6 +8,7 @@
     ../../kitty.nix
     ../../mpv.nix
     ../../neovim.nix
+    ../../podman/home.nix
     ../../zsh/home.nix
   ];
 
