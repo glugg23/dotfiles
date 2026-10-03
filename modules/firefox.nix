@@ -52,12 +52,13 @@
         in
         {
           "*".installation_mode = "blocked";
+          "addon@darkreader.org" = installExtention "darkreader" default;
+          "firefox@betterttv.net" = installExtention "betterttv" default;
+          "jid1-xUfzOsOFlzSOXg@jetpack" = installExtention "reddit-enhancement-suite" default;
+          "nova-ash@mozilla.org" = installExtention "nova-ash" default;
+          "sponsorBlocker@ajay.app" = installExtention "sponsorblock" private;
           "uBlock0@raymondhill.net" = installExtention "ublock-origin" important;
           "{446900e4-71c2-419f-a6a7-df9c091e268b}" = installExtention "bitwarden-password-manager" important;
-          "jid1-xUfzOsOFlzSOXg@jetpack" = installExtention "reddit-enhancement-suite" default;
-          "sponsorBlocker@ajay.app" = installExtention "sponsorblock" private;
-          "firefox@betterttv.net" = installExtention "betterttv" default;
-          "addon@darkreader.org" = installExtention "darkreader" default;
         };
     };
 
@@ -74,7 +75,7 @@
         "browser.tabs.loadBookmarksInBackground" = true;
         "browser.urlbar.trimURLs" = false;
         "browser.warnOnQuitShortcut" = false;
-        "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+        "extensions.activeThemeID" = "nova-ash@mozilla.org";
         "general.smoothScroll" = false;
         "intl.locale.requested" = "en-GB,en-US";
         "privacy.globalprivacycontrol.enabled" = true;
