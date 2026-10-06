@@ -78,6 +78,7 @@
         "extensions.activeThemeID" = "nova-ash@mozilla.org";
         "general.smoothScroll" = false;
         "intl.locale.requested" = "en-GB,en-US";
+        "middlemouse.paste" = false;
         "privacy.globalprivacycontrol.enabled" = true;
         "privacy.userContext.enabled" = false;
         "privacy.userContext.ui.enabled" = false;
