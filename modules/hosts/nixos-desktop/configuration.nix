@@ -92,6 +92,7 @@
   ];
 
   users.users."max" = {
+    description = "Max Leonhardt";
     isNormalUser = true;
     extraGroups = [
       "libvirtd"
