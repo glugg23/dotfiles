@@ -6,6 +6,7 @@
     ./hardware-configuration.nix
     ../../fonts.nix
     ../../git
+    ../../kde.nix
     ../../limine.nix
     ../../nh.nix
     ../../nix.nix
@@ -48,17 +49,6 @@
   services.xserver.xkb.layout = "gb";
 
   services.displayManager.plasma-login-manager.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    discover
-    elisa
-    kate
-    konsole
-    ktexteditor
-    okular
-    plasma-browser-integration
-    qrca
-  ];
 
   services.tailscale.enable = true;
 
