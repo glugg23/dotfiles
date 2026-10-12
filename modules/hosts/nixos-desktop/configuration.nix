@@ -79,6 +79,7 @@
     fastfetch
     gallery-dl
     itgmania
+    kdePackages.kcalc
     lutris
     osu-lazer-bin
     qbittorrent
