@@ -81,6 +81,7 @@
     itgmania
     kdePackages.kcalc
     lutris
+    obsidian
     osu-lazer-bin
     qbittorrent
     spotify
