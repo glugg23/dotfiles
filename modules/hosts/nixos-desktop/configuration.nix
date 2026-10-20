@@ -106,10 +106,23 @@
     initialPassword = "max"; # for build-vm
   };
 
-  security.pki.caCertificateBlacklist = [
-    "Comodo AAA Services root"
-    "emSign ECC Root CA - G3"
-  ];
+  security.pki.caCertificateBlacklist =
+    let
+      noOverride = lib.versionAtLeast pkgs.cacert.version "3.131.1";
+    in
+    lib.warnIf noOverride
+      ''
+        cacert >= 3.131.1 is now in nixpkgs, the override can be removed.
+      ''
+      (
+        if noOverride then
+          [ ]
+        else
+          [
+            "Comodo AAA Services root"
+            "emSign ECC Root CA - G3"
+          ]
+      );
 
   virtualisation.vmVariantWithBootLoader.virtualisation = {
     cores = 4;
