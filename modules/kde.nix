@@ -13,4 +13,9 @@
     qrca
   ];
   programs.kde-pim.enable = false;
+
+  systemd.user.services.kde-baloo = {
+    overrideStrategy = "asDropin";
+    after = [ "plasma-kwin_wayland.service" ];
+  };
 }
