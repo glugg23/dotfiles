@@ -75,6 +75,7 @@
   programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
+    (callPackage ../../pkgs/rpgmaker-mv-decrypter.nix { })
     (callPackage ../../scripts/switch-audio-profile.nix { })
     fastfetch
     gallery-dl
