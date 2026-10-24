@@ -4,7 +4,7 @@
     settings = {
       init.defaultBranch = "main";
       user = {
-        email = "m.leonhardt424@gmail.com";
+        email = "git@leonhardt.dev";
         name = "Max Leonhardt";
       };
     };
