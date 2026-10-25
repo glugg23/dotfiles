@@ -55,10 +55,9 @@
 
   services.avahi = {
     enable = true;
-    publish = {
-      enable = true;
-      addresses = true;
-      workstation = true;
+    settings.publish = {
+      publish-addresses = true;
+      publish-workstation = true;
     };
   };
 
