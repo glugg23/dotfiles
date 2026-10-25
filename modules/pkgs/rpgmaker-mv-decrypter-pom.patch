@@ -1,0 +1,14 @@
+diff --git a/pom.xml b/pom.xml
+index e02cb4d..b84a364 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -48,7 +48,9 @@
+ 
+ 		<plugins>
+ 			<plugin>
++				<groupId>org.apache.maven.plugins</groupId>
+ 				<artifactId>maven-assembly-plugin</artifactId>
++				<version>3.8.0</version>
+ 				<configuration>
+ 					<descriptorRefs>
+ 						<descriptorRef>jar-with-dependencies</descriptorRef>

@@ -17,7 +17,11 @@ maven.buildMavenPackage (finalAttrs: {
     hash = "sha256-Db2kJOI1PvmKn8caTV0VKt7eCOvnlgCmtbMLedFyvHI=";
   };
 
-  mvnHash = "sha256-JEdHcjxelHI7z8tCYd7zKKm2vTMW3MgpNgsVc61OiWQ=";
+  patches = [
+    ./rpgmaker-mv-decrypter-pom.patch
+  ];
+
+  mvnHash = "sha256-nm6dHhXJhFB8Or5IbTDx6HZpOuFPdG8dg5ftguJb5TM=";
 
   nativeBuildInputs = [ makeWrapper ];
 
