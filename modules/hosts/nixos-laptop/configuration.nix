@@ -16,6 +16,7 @@
     ../../nix.nix
     ../../noctalia/nixos.nix
     ../../pipewire.nix
+    ../../plymouth.nix
     ../../podman/nixos.nix
     ../../zsh
   ];
