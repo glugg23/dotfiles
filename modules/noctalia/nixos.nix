@@ -1,34 +1,20 @@
 { pkgs, ... }:
 
-let
-  toml = pkgs.formats.toml { };
-  greeter-config = toml.generate "greeter.toml" {
-    cursor = {
-      theme = "capitaine-cursors";
-      size = 24;
-      path = "${pkgs.capitaine-cursors}/share/icons";
-    };
-    auth.allow_empty_password = true;
-  };
-in
 {
   environment.systemPackages = with pkgs; [
     noctalia
     noctalia-greeter
   ];
 
-  services.greetd = {
+  services.displayManager.noctalia-greeter = {
     enable = true;
     settings = {
-      default_session = {
-        command = "${pkgs.noctalia-greeter}/bin/noctalia-greeter-session";
-        user = "greeter";
-      };
+      auth.allow_empty_password = true;
+      cursor.size = 24;
+    };
+    cursorTheme = {
+      package = pkgs.capitaine-cursors;
+      name = "capitaine-cursors";
     };
   };
-
-  systemd.tmpfiles.rules = [
-    "d /var/lib/noctalia-greeter 0755 greeter greeter - -"
-    "L+ /var/lib/noctalia-greeter/greeter.toml 0644 greeter greeter - ${greeter-config}"
-  ];
 }
