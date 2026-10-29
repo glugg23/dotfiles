@@ -79,6 +79,7 @@
     (callPackage ../../scripts/switch-audio-profile.nix { })
     fastfetch
     gallery-dl
+    gimp
     itgmania
     kdePackages.kcalc
     libreoffice-qt-stable
