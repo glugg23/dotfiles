@@ -81,6 +81,7 @@
     gallery-dl
     itgmania
     kdePackages.kcalc
+    libreoffice-qt-stable
     lutris
     obsidian
     osu-lazer-bin
