@@ -39,9 +39,6 @@
           home-manager.nixosModules.home-manager
           {
             home-manager = {
-              extraSpecialArgs = {
-                hostname = "nixos-desktop";
-              };
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "bak";
@@ -60,9 +57,6 @@
           home-manager.nixosModules.home-manager
           {
             home-manager = {
-              extraSpecialArgs = {
-                hostname = "nixos-laptop";
-              };
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "bak";

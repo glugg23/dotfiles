@@ -1,7 +1,7 @@
 {
   config,
-  hostname,
   lib,
+  osConfig,
   pkgs,
   ...
 }:
@@ -23,7 +23,7 @@
       screenshot-directory = "${config.home.homeDirectory}/Pictures/Screenshots/";
     };
 
-    scriptOpts = lib.mkIf (hostname == "nixos-desktop") {
+    scriptOpts = lib.mkIf (osConfig.networking.hostName == "nixos-desktop") {
       osc = {
         scalewindowed = 1.25;
         scalefullscreen = 1.25;
