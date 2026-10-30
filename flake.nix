@@ -30,9 +30,6 @@
       packages.x86_64-linux.default = self.nixosConfigurations.iso.config.system.build.isoImage;
 
       nixosConfigurations.nixos-desktop = nixpkgs-unstable.lib.nixosSystem {
-        specialArgs = {
-          hostname = "nixos-desktop";
-        };
         modules = [
           disko.nixosModules.disko
           ./modules/hosts/nixos-desktop/configuration.nix
@@ -49,9 +46,6 @@
       };
 
       nixosConfigurations.nixos-laptop = nixpkgs-unstable.lib.nixosSystem {
-        specialArgs = {
-          hostname = "nixos-laptop";
-        };
         modules = [
           ./modules/hosts/nixos-laptop/configuration.nix
           home-manager.nixosModules.home-manager
