@@ -2,17 +2,19 @@ final: prev: {
   kdePackages = prev.kdePackages.overrideScope (
     kfinal: kprev:
     let
+      version = kprev.plasma-workspace.version;
       plasmaWorkspaceMenu = prev.stdenv.mkDerivation {
         name = "plasma-workspace-applications-menu";
-        version = "6.6.4";
+        inherit version;
 
         src = prev.fetchFromGitLab {
           domain = "invent.kde.org";
           owner = "plasma";
           repo = "plasma-workspace";
-          tag = "v6.6.4";
-          sparseCheckout = [ "menu/desktop/plasma-applications.menu" ];
-          hash = "sha256-KRfmKLv8R+e+82mIUsYqh4SNPmn3NbBfQ+nGF1wi02E=";
+          tag = "v${version}";
+          sparseCheckout = [ "/menu/desktop/plasma-applications.menu" ];
+          nonConeMode = true;
+          hash = "sha256-YhulrbYBVrhh3rYeeLAVfrJfZ86pjibVQgfo6vKaH5k=";
         };
 
         installPhase = ''
