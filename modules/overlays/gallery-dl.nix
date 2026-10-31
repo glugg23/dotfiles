@@ -1,12 +1,12 @@
 final: prev: {
   gallery-dl = prev.gallery-dl.overridePythonAttrs (oldAttrs: {
-    version = "1.32.12-dev";
+    version = "1.33.0-dev";
 
     src = prev.fetchFromCodeberg {
       owner = "HumanManFromEarth";
       repo = "gallery-dl";
-      rev = "78aa2542a2438831b33e68f4fe291bd15cb61cc3";
-      hash = "sha256-D0FPJXGDi2tY7ggWNRbKF3vOtVqmh3GNA/7AQQ/aGJc=";
+      rev = "a0aa7a7c6b8cb0152cb06bf29d2c6bec90bba4a3";
+      hash = "sha256-BBlrKMN8vV0scltVnK3MEykmqbHESUQsHTbKN6zjhtc=";
     };
 
     dependencies = oldAttrs.dependencies ++ [
