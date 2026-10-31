@@ -88,6 +88,12 @@
       "wheel"
     ];
     shell = pkgs.zsh;
+    initialPassword = "max";
+  };
+
+  virtualisation.vmVariantWithBootLoader.virtualisation = {
+    cores = 4;
+    memorySize = 8192;
   };
 
   system.stateVersion = "25.11";

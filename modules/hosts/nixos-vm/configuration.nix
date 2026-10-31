@@ -32,7 +32,7 @@
       "wheel"
     ];
     shell = pkgs.zsh;
-    initialHashedPassword = "$y$j9T$HuQzMgRNfOhCHmbGB25C1/$/NRhjPej3LruxcAP8YUxYv3r3EOrGMIHwSdO/WshzrB";
+    initialPassword = "max";
   };
 
   environment.systemPackages = with pkgs; [
