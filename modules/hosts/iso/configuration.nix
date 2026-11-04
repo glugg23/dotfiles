@@ -1,4 +1,9 @@
-{ pkgs, modulesPath, ... }:
+{
+  lib,
+  modulesPath,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -12,6 +17,7 @@
 
   users.users.nixos = {
     shell = pkgs.zsh;
+    initialHashedPassword = lib.mkForce "$y$j9T$6lixZcT1OFkJEsy76yyTz/$yuuBikCUy4n6OUhyxrmX6WsMU4jxEz.JoxWgk6qHSu9";
   };
 
   environment.systemPackages = with pkgs; [

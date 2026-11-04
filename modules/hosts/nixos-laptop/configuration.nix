@@ -88,7 +88,7 @@
       "wheel"
     ];
     shell = pkgs.zsh;
-    initialPassword = "max";
+    initialHashedPassword = "$y$j9T$gOnjuoA8TAbuXxDP.DQuV/$Rs/32JtuGKtdVy2J8QZsHqzcErS2sFs/zf8IBMVuNRC";
   };
 
   virtualisation.vmVariantWithBootLoader.virtualisation = {

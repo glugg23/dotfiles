@@ -106,7 +106,7 @@
       "wheel"
     ];
     shell = pkgs.zsh;
-    initialPassword = "max"; # for build-vm
+    initialHashedPassword = "$y$j9T$gOnjuoA8TAbuXxDP.DQuV/$Rs/32JtuGKtdVy2J8QZsHqzcErS2sFs/zf8IBMVuNRC";
   };
 
   virtualisation.vmVariantWithBootLoader.virtualisation = {
