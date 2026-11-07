@@ -21,6 +21,11 @@
   home.username = "max";
   home.homeDirectory = "/home/max";
 
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+  };
+
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;

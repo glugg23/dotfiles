@@ -19,6 +19,11 @@
   home.username = "max";
   home.homeDirectory = "/home/max";
 
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+  };
+
   xdg.portal = {
     enable = true;
     configPackages = [ pkgs.kdePackages.xdg-desktop-portal-kde ];

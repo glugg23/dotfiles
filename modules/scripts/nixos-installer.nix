@@ -1,8 +1,9 @@
 {
-  writeShellApplication,
+  disko,
   git,
   gum,
-  disko,
+  wget,
+  writeShellApplication,
 }:
 
 writeShellApplication {
@@ -11,6 +12,7 @@ writeShellApplication {
     disko
     git
     gum
+    wget
   ];
   text = ''
     if [ "$(id -u)" -eq 0 ]; then
@@ -48,8 +50,13 @@ writeShellApplication {
     sudo nixos-install --flake "$HOME/dotfiles#$TARGET_HOST"
 
     echo "Copying dotfiles to home"
-    cp -r "$HOME/dotfiles" /mnt/home/max/ && sudo nixos-enter --root /mnt -c 'chown -R max:users /home/max/dotfiles'
+    cp -r "$HOME/dotfiles" /mnt/home/max/
+    WALLPAPERS=/mnt/home/max/Pictures/Wallpapers
+    mkdir -p $WALLPAPERS
+    wget -qP $WALLPAPERS -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_1080.jpg
+    wget -qP $WALLPAPERS -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_4k.jpg
+
     echo "Setting password for account"
-    sudo nixos-enter --root /mnt -c 'passwd max'
+    sudo nixos-enter --root /mnt -c 'chown -R max:users /home/max && passwd max'
   '';
 }
