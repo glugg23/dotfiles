@@ -71,6 +71,7 @@
     kdePackages.ark
     kdePackages.dolphin
     kdePackages.ffmpegthumbs
+    kdePackages.gwenview
     libreoffice-qt-stable
     obsidian
     pavucontrol

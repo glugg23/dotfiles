@@ -132,7 +132,7 @@ source = "community"
 directory = "/home/max/Pictures/Wallpapers"
 
     [wallpaper.default]
-    path = "/home/max/Pictures/Wallpapers/garden_of_words_laptop.jpg"
+    path = "/home/max/Pictures/Wallpapers/garden_of_words_4k.jpg"
 
 [widget.clock]
 format = "{:%I:%M:%S %p}"
