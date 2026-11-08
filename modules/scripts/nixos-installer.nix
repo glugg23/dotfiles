@@ -51,10 +51,16 @@ writeShellApplication {
 
     echo "Copying dotfiles to home"
     cp -r "$HOME/dotfiles" /mnt/home/max/
-    WALLPAPERS=/mnt/home/max/Pictures/Wallpapers
-    mkdir -p $WALLPAPERS
-    wget -qP $WALLPAPERS -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_1080.jpg
-    wget -qP $WALLPAPERS -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_4k.jpg
+
+    GRAPHICS_ENABLED=$(nix eval "$HOME/dotfiles#nixosConfigurations.$TARGET_HOST.config.hardware.graphics.enable")
+
+    if [ "$GRAPHICS_ENABLED" = "true" ]; then
+      echo "Downloading wallpapers"
+      WALLPAPERS=/mnt/home/max/Pictures/Wallpapers
+      mkdir -p $WALLPAPERS
+      wget -qP $WALLPAPERS -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_1080.jpg
+      wget -qP $WALLPAPERS -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_4k.jpg
+    fi
 
     echo "Setting password for account"
     sudo nixos-enter --root /mnt -c 'chown -R max:users /home/max && passwd max'
