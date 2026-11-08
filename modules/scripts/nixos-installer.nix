@@ -2,6 +2,7 @@
   disko,
   git,
   gum,
+  jq,
   wget,
   writeShellApplication,
 }:
@@ -12,6 +13,7 @@ writeShellApplication {
     disko
     git
     gum
+    jq
     wget
   ];
   text = ''
@@ -34,6 +36,13 @@ writeShellApplication {
       gum choose
     )
 
+    TARGET_USER=$(
+      nix eval --json "$HOME/dotfiles#nixosConfigurations.$TARGET_HOST.config.users.users" \
+        --apply "c: builtins.map (u: u.name) (builtins.filter (u: u.isNormalUser) (builtins.attrValues c))" |
+      jq -r '.[]' |
+      gum choose --select-if-one
+    )
+
     if [ ! -e "$HOME/dotfiles/modules/hosts/$TARGET_HOST/disko.nix" ]; then
       echo "[ERROR] $(basename "$0") was unable to find the disko config at $HOME/dotfiles/modules/hosts/$TARGET_HOST/disko.nix"
       exit 1
@@ -49,20 +58,21 @@ writeShellApplication {
 
     sudo nixos-install --flake "$HOME/dotfiles#$TARGET_HOST"
 
-    echo "Copying dotfiles to home"
-    cp -r "$HOME/dotfiles" /mnt/home/max/
+    echo "Copying dotfiles to $TARGET_USER's home"
+    cp -r "$HOME/dotfiles" "/mnt/home/$TARGET_USER/"
 
     GRAPHICS_ENABLED=$(nix eval "$HOME/dotfiles#nixosConfigurations.$TARGET_HOST.config.hardware.graphics.enable")
 
     if [ "$GRAPHICS_ENABLED" = "true" ]; then
       echo "Downloading wallpapers"
-      WALLPAPERS=/mnt/home/max/Pictures/Wallpapers
-      mkdir -p $WALLPAPERS
-      wget -qP $WALLPAPERS -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_1080.jpg
-      wget -qP $WALLPAPERS -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_4k.jpg
+      WALLPAPERS="/mnt/home/$TARGET_USER/Pictures/Wallpapers"
+      mkdir -p "$WALLPAPERS"
+      wget -qP "$WALLPAPERS" -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_1080.jpg
+      wget -qP "$WALLPAPERS" -- https://github.com/glugg23/dotfiles/releases/download/wallpapers/garden_of_words_4k.jpg
     fi
 
-    echo "Setting password for account"
-    sudo nixos-enter --root /mnt -c 'chown -R max:users /home/max && passwd max'
+    echo "Setting password for $TARGET_USER"
+    COMMAND="chown -R $TARGET_USER:users /home/$TARGET_USER && passwd $TARGET_USER"
+    sudo nixos-enter --root /mnt -c "$COMMAND"
   '';
 }
