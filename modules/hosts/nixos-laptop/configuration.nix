@@ -28,8 +28,8 @@
   hardware.bluetooth.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  zramSwap.enable = true;
+  boot.zswap.enable = true;
+  swapDevices = [ { device = "/.swap/swapfile"; } ];
 
   networking.hostName = "nixos-laptop";
   networking.networkmanager.enable = true;
