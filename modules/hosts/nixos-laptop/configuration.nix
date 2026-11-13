@@ -82,47 +82,26 @@
     yazi
   ];
 
-  systemd.services =
+  systemd.services.toggle-wireless-sleep =
     let
-      serviceConfig = {
-        Type = "oneshot";
-        RemainAfterExit = false;
-        User = "root";
-      };
+      target = [ "sleep.target" ];
+      command = state: ''
+        ${pkgs.networkmanager}/bin/nmcli radio wifi ${state} || true
+        ${pkgs.bluez}/bin/bluetoothctl power ${state} || true
+      '';
     in
     {
-      disable-wireless-hibernate =
-        let
-          target = [
-            "hibernate.target"
-            "hybrid-sleep.target"
-          ];
-        in
-        {
-          description = "Disable WiFi and Bluetooth before hibernation";
-          inherit serviceConfig;
-          wantedBy = target;
-          before = target;
-          script = ''
-            ${pkgs.networkmanager}/bin/nmcli radio wifi off || true
-            ${pkgs.bluez}/bin/bluetoothctl power off || true
-          '';
-        };
-
-      enable-wireless-resume =
-        let
-          target = [ "post-resume.target" ];
-        in
-        {
-          description = "Enable WiFi and Bluetooth after resume";
-          inherit serviceConfig;
-          wantedBy = target;
-          after = target;
-          script = ''
-            ${pkgs.networkmanager}/bin/nmcli radio wifi on || true
-            ${pkgs.bluez}/bin/bluetoothctl power on || true
-          '';
-        };
+      description = "Toggle WiFi and Bluetooth for sleep";
+      serviceConfig = {
+        Type = "oneshot";
+        RemainAfterExit = true;
+        User = "root";
+      };
+      unitConfig.StopWhenUnneeded = true;
+      wantedBy = target;
+      before = target;
+      script = command "off"; # turn off wifi before sleep
+      preStop = command "on"; # turn on wifi after sleep
     };
 
   users.users.max = {
