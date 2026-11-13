@@ -82,6 +82,49 @@
     yazi
   ];
 
+  systemd.services =
+    let
+      serviceConfig = {
+        Type = "oneshot";
+        RemainAfterExit = false;
+        User = "root";
+      };
+    in
+    {
+      disable-wireless-hibernate =
+        let
+          target = [
+            "hibernate.target"
+            "hybrid-sleep.target"
+          ];
+        in
+        {
+          description = "Disable WiFi and Bluetooth before hibernation";
+          inherit serviceConfig;
+          wantedBy = target;
+          before = target;
+          script = ''
+            ${pkgs.networkmanager}/bin/nmcli radio wifi off || true
+            ${pkgs.bluez}/bin/bluetoothctl power off || true
+          '';
+        };
+
+      enable-wireless-resume =
+        let
+          target = [ "post-resume.target" ];
+        in
+        {
+          description = "Enable WiFi and Bluetooth after resume";
+          inherit serviceConfig;
+          wantedBy = target;
+          after = target;
+          script = ''
+            ${pkgs.networkmanager}/bin/nmcli radio wifi on || true
+            ${pkgs.bluez}/bin/bluetoothctl power on || true
+          '';
+        };
+    };
+
   users.users.max = {
     isNormalUser = true;
     extraGroups = [
