@@ -82,17 +82,15 @@
     yazi
   ];
 
-  systemd.services.toggle-wireless-sleep =
+  systemd.services.toggle-wireless-hibernate =
     let
-      target = [ "sleep.target" ];
-      command = state: ''
-        ${pkgs.networkmanager}/bin/nmcli radio wifi ${state} || true
-        ${pkgs.bluez}/bin/bluetoothctl power ${state} || true
-      '';
+      target = [ "hibernate.target" ];
     in
     {
-      description = "Toggle WiFi and Bluetooth for sleep";
+      description = "Toggle WiFi and Bluetooth for hibernate";
       serviceConfig = {
+        ExecStart = "${pkgs.kmod}/bin/modprobe -r mt7925e";
+        ExecStop = "${pkgs.kmod}/bin/modprobe mt7925e";
         Type = "oneshot";
         RemainAfterExit = true;
         User = "root";
@@ -100,8 +98,6 @@
       unitConfig.StopWhenUnneeded = true;
       wantedBy = target;
       before = target;
-      script = command "off"; # turn off wifi before sleep
-      preStop = command "on"; # turn on wifi after sleep
     };
 
   users.users.max = {
