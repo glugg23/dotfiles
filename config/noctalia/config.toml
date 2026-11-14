@@ -15,7 +15,7 @@ start = [ "group:g3", "workspaces", "tray" ]
 
     [[bar.default.capsule_group]]
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g1"
     members = [ "audio_visualizer", "media", "audio_visualizer" ]
     opacity = 1.0
@@ -23,7 +23,7 @@ start = [ "group:g3", "workspaces", "tray" ]
 
     [[bar.default.capsule_group]]
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g2"
     members = [ "volume", "brightness", "battery", "network" ]
     opacity = 1.0
@@ -31,7 +31,7 @@ start = [ "group:g3", "workspaces", "tray" ]
 
     [[bar.default.capsule_group]]
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g3"
     members = [ "session", "control-center", "notifications", "launcher" ]
     opacity = 1.0
@@ -39,29 +39,29 @@ start = [ "group:g3", "workspaces", "tray" ]
 
     [[bar.default.capsule_group]]
     enabled = true
-    fill = "surface_variant"
+    fill = "surface_container"
     id = "g4"
     members = [ "date", "clock" ]
     opacity = 1.0
     padding = 6.0
 
 [idle]
-behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+behavior_order = [ "lock", "Lock & Hibernate" ]
+
+    [idle.behavior."Lock & Hibernate"]
+    action = "command"
+    command = "systemctl suspend-then-hibernate"
+    enabled = true
+    timeout = 900.0
 
     [idle.behavior.lock]
     action = "lock"
     enabled = true
     timeout = 600.0
 
-    [idle.behavior.lock-and-suspend]
-    action = "lock_and_suspend"
-    enabled = true
-    timeout = 900.0
-
-    [idle.behavior.screen-off]
-    action = "screen_off"
-    enabled = false
-    timeout = 660.0
+[lockscreen]
+transition = [ "fade" ]
+transition_duration = 500
 
 [lockscreen_widgets]
 enabled = true
@@ -88,7 +88,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -99,6 +99,7 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = false
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = false
@@ -123,6 +124,42 @@ time_format = "{:%I:%M}"
 
     [shell.launcher.providers.session]
     global = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    command = "systemctl suspend-then-hibernate"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
 
 [theme]
 community_palette = "Everforest"
