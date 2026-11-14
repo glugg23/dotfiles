@@ -79,6 +79,7 @@
     spotify
     tree
     vesktop
+    vscodium-fhs
     yazi
   ];
 
