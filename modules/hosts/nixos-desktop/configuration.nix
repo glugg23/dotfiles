@@ -87,6 +87,7 @@
     obsidian
     osu-lazer-bin
     qbittorrent
+    signal-desktop
     spotify
     tree
     unrar
