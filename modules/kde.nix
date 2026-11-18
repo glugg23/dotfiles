@@ -13,4 +13,9 @@
     qrca
   ];
   programs.kde-pim.enable = false;
+
+  environment.systemPackages = with pkgs; [
+    hunspellDicts.en_GB-ise
+    kdePackages.kcalc
+  ];
 }

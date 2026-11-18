@@ -81,7 +81,6 @@
     gallery-dl
     gimp
     itgmania
-    kdePackages.kcalc
     libreoffice-qt-stable
     lutris
     obsidian
