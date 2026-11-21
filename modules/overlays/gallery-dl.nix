@@ -5,8 +5,8 @@ final: prev: {
     src = prev.fetchFromCodeberg {
       owner = "HumanManFromEarth";
       repo = "gallery-dl";
-      rev = "a0aa7a7c6b8cb0152cb06bf29d2c6bec90bba4a3";
-      hash = "sha256-BBlrKMN8vV0scltVnK3MEykmqbHESUQsHTbKN6zjhtc=";
+      rev = "1222ff1b11689d7a0c72bb3ec8cf2a2378c57dd5";
+      hash = "sha256-HdnZaLgDH32HYw3gtceMphv6jb5aqIUdvDUJZYUmsrM=";
     };
 
     dependencies = oldAttrs.dependencies ++ [
