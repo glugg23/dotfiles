@@ -11,6 +11,7 @@
     ../../git
     ../../lid-guard.nix
     ../../limine.nix
+    ../../mullvad.nix
     ../../nh.nix
     ../../niri/nixos.nix
     ../../nix.nix
@@ -18,6 +19,7 @@
     ../../pipewire.nix
     ../../plymouth.nix
     ../../podman/nixos.nix
+    ../../tailscale.nix
     ../../zsh
   ];
 
@@ -41,12 +43,6 @@
   services.libinput.enable = true;
   services.flatpak.enable = true;
   services.upower.enable = true;
-  services.tailscale.enable = true;
-
-  services.mullvad-vpn = {
-    enable = true;
-    gui.enable = true;
-  };
 
   services.fprintd.lid-guard = {
     enable = true;

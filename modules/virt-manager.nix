@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   programs.virt-manager.enable = true;
   virtualisation.libvirtd = {
@@ -12,4 +14,6 @@
       seccomp_sandbox = 0
     '';
   };
+
+  networking.firewall.trustedInterfaces = config.virtualisation.libvirtd.allowedBridges;
 }

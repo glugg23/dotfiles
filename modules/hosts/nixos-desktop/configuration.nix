@@ -8,12 +8,14 @@
     ../../git
     ../../kde.nix
     ../../limine.nix
+    ../../mullvad.nix
     ../../nh.nix
     ../../nix.nix
     ../../nvidia.nix
     ../../pipewire.nix
     ../../plymouth.nix
     ../../podman/nixos.nix
+    ../../tailscale.nix
     ../../virt-manager.nix
     ../../zsh
   ];
@@ -49,13 +51,6 @@
   services.xserver.xkb.layout = "gb";
 
   services.displayManager.plasma-login-manager.enable = true;
-
-  services.tailscale.enable = true;
-
-  services.mullvad-vpn = {
-    enable = true;
-    gui.enable = true;
-  };
 
   services.udev.extraRules =
     let
