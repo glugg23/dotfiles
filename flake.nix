@@ -61,6 +61,23 @@
         ];
       };
 
+      # TODO: Switch this to nixos-26.11 when it releases
+      nixosConfigurations.homeserver = nixpkgs-unstable.lib.nixosSystem {
+        modules = [
+          disko.nixosModules.disko
+          ./modules/hosts/homeserver/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "bak";
+              users.max = ./modules/hosts/homeserver/home.nix;
+            };
+          }
+        ];
+      };
+
       nixosConfigurations.iso = nixpkgs-unstable.lib.nixosSystem {
         modules = [
           ./modules/hosts/iso/configuration.nix
