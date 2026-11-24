@@ -32,9 +32,9 @@
   '';
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.tmp.useTmpfs = true;
 
   fileSystems = {
-    "/tmp".fsType = "tmpfs";
     "/mnt/Storage" = {
       device = "/dev/disk/by-uuid/68ff4fa3-ab84-4c11-b1d6-1397a9dc7579";
       fsType = "ext4";

@@ -30,6 +30,7 @@
   hardware.bluetooth.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.tmp.useTmpfs = true;
   boot.zswap.enable = true;
   swapDevices = [ { device = "/.swap/swapfile"; } ];
 

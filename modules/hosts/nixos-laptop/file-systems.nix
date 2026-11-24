@@ -16,6 +16,5 @@
       "/var/cache".options = defaults;
       "/var/tmp".options = defaults;
       "/var/log".options = defaults;
-      "/tmp".fsType = "tmpfs";
     };
 }
