@@ -106,23 +106,22 @@
         rootFsOptions = {
           acltype = "posixacl";
           atime = "off";
-          canmount = "off";
+          canmount = "on";
           compression = "lz4";
           dnodesize = "auto";
-          mountpoint = "none";
+          mountpoint = "/mnt";
           # recordsize = "1M";
           xattr = "sa";
         };
         datasets =
           let
-            mkDataSet = m: {
+            dataSet = {
               type = "zfs_fs";
-              mountpoint = m;
             };
           in
           {
-            # Create with `sudo zfs create -o mountpoint=/mnt/jellyfin dpool/jellyfin`
-            # "jellyfin" = mkDataSet "/mnt/jellyfin";
+            # Create with `sudo zfs create dpool/jellyfin`
+            # "jellyfin" = dataSet;
           };
       };
     };
